@@ -57,7 +57,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
         * O protótipo deve possui no mínimo duas relações N para N
         * o mínimo de entidades do modelo conceitual será igual a 5
         
-![Alt text](https://github.com/maykew/trabalho_bd1/blob/master/images/modelo_conceitual.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/modelo_conceitual.png?raw=true "Modelo Conceitual")
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
     C) QUALIDADE 
@@ -137,6 +137,8 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
         a) inclusão do modelo lógico do banco de dados
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade)
+
+![Alt text](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/modelo_logico.png?raw=true "Modelo Lógico")
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas DDL 
