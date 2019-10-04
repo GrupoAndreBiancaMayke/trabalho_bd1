@@ -26,7 +26,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 <p align="center">
-  <img width="356" height="725" src=https://github.com/maykew/trabalho_bd1/blob/master/images/Tela%20Login.png?raw=true "Title">
+  <img width="356" height="725" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Tela%20Login.png?raw=true "Contratei Servicos">
 </p>
 
 ![Arquivo PDF do Protótipo Balsamiq feito para o Sistema de Contratação de Serviços](https://github.com/maykew/trabalho_bd1/blob/master/arquivos/TelasSistemaContratacaodeServicos.pdf?raw=true "Sistema de Contratação de Serviços")
