@@ -138,7 +138,9 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
         b) verificação de correspondencia com o modelo conceitual 
         (não serão aceitos modelos que não estejam em conformidade)
 
+<p align="center">
 ![Alt text](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/modelo_logico.png?raw=true "Modelo Lógico")
+</p>
 
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas DDL 
