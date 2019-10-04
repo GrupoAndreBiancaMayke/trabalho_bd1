@@ -46,7 +46,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ![Tabela de dados do Sistema de Contratação de Serviços](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/TabelasSistemaContratacaodeServicos.xlsx?raw=true "Tabela - Sistema de Contratação de Serviços")
     
 ### 5.MODELO CONCEITUAL<br>
-* NOTACAO ENTIDADE RELACIONAMENTO 
+* Notação Entidade Relacionamento
         
 <p align="center">
   <img width="701" height="547" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/modelo_conceitual.png?raw=true "Modelo Conceitual")
