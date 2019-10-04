@@ -146,6 +146,10 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ### 7	MODELO FÍSICO<br>
         a) inclusão das instruções de criacão das estruturas DDL 
         (criação de tabelas, alterações, etc..) 
+
+<p align="center">
+  <img width="326" height="574" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Modelo_Fisico.png?raw=true "Modelo Fisico">
+</p> 
         
 >## Marco de Entrega 01 em:<br>
         
