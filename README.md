@@ -61,7 +61,12 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
   <img width="701" height="547" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/modelo_conceitual.png?raw=true "Modelo Conceitual")
 </p>
       
-    
+* Notação UML
+
+<p align="center">
+  <img width="746" height="527" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/notacao_UML.jpg
+</p>
+ 
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
     C) QUALIDADE 
         Garantir que a semântica dos atributos seja clara no esquema
