@@ -131,10 +131,8 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     data_agendada: campo que armazena a data em que o serviço vai ser realizado.
     hora_agendada: campo que armazena o horario em que o serviço vai ser realizado.
  
-#### 5.3 Principais fluxos de informação e principais tabelas do sistema     
-    a) Quais os principais fluxos de dados de informação no sistema em densenvolvimento (mínimo 3)
-    b) Quais as tabelas que conterão mais dados no sistema em densenvolvimento (mínimo 3)
-    c) informe quais as 5 principais tabelas do sistema em densenvolvimento.
+#### 5.3 Principais fluxos de informação e principais tabelas do sistema  
+> Os principais fluxos de dados de informação e, ainda, conterão mais dados no sistema ContrateiServiços são as tabelas USUARIO, SERVICO e AGENDAMENTO. As principais tabelas no sistema são USUARIO, SERVICO, AGENDAMENTO, ENDERECO e TELEFONE.
 
 ### 6	MODELO LÓGICO<br>
         a) inclusão do modelo lógico do banco de dados
