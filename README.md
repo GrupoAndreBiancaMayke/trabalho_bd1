@@ -1,48 +1,47 @@
-# TRABALHO 01:  Título do Trabalho
+# TRABALHO BANCO DE DADOS:  Sistema de Contratação de Serviços
 Trabalho desenvolvido durante a disciplina de BD1
 
 # Sumário
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-primeiro_componente_do_grupo:email_primeiro_componente@dominio.com<br>
-segundo_componente_do_grupo:email_segundo_componente@dominio.com<br>
+André Luiz Coelho Silva: andrelcs@me.com<br>
+Bianca Albuquerque da Silva: biancaalbuquerqs@gmail.com<br>
+Mayke Willans Christo Pereira: maykewillians3@gmail.com<br>   
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
-Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
-<br>e motivação da escolha realizada. <br>
 
-> A empresa "Devcom Projetos" visa colaborar com desenvolvimento de projetos para uma sociedade melhor. Sabendo-se dos desafios para gerenciar projetos dentro de uma empresa e visando unir as informações relativas a funcionários, departamentos e projetos em um mesmo local, ficamos motivados com o desenvolvimento deste sistema. O Sistema "Devcom" tem como objetivo gerenciar todas as informações ao desenvolvimento das atividades de projetos em diversas localidades do país. Para realizar suas operações adequadamente e empresa necessita que sistema que armazene informações relativas aos Projetos, Departamentos e Empregados, além de também armazenar dados sobre  Dependentes e Históricos de Salário dos empregados. O sistema deverá gerar um conjunto de relatórios que por sua vez atenderá os anseios da empresa em questão.
+> De acordo com dados divulgados pelo Instituto Brasileiro de Geografia e Estatística (IBGE), em setembro de 2019, a taxa de desemprego no Brasil ficou em 11,8% no trimestre encerrado em agosto, atingindo 12,6 milhões de pessoas. O resultado representou uma estabilidade frente ao último ano e pode ser justificado devido ao aumento do número de trabalhadores por conta própria e sem carteira assinada. O trabalho por conta própria chegou a 24,3 milhões de pessoas, o que representa uma alta de 4,7% (mais 1,1 milhão de pessoas) em relação ao mesmo período de 2018. Já o número de empregados sem carteira de trabalho assinada atingiu o recorde de 11,8 milhões de pessoas, o que representa um crescimento anual de 5,9% (mais 661 mil pessoas). 
+Baseado nisso, os trabalhos autônomos têm se tornado uma opção extremamente viável para a população, e assim, aplicativos sob demanda como o iFood, Rappi, 99 e Uber, que atuam em problemas usuais e comuns, oferecendo praticidade e vantagem em relação a preços e comodidade, estão se tornando cada vez mais importantes no dia a dia.
+Tendo em vista tais aspectos, o presente trabalho tem o objetivo de, através de um sistema informatizado, estimular o trabalho autônomo e promover a divulgação de pequenos serviços.
  
 
 ### 3.MINI-MUNDO<br>
 
-Descrever o mini-mundo! (Não deve ser maior do que 30 linhas) <br>
-Entrevista com o usuário e identificação dos requisitos.<br>
-Descrição textual das regras de negócio definidas como um  subconjunto do mundo real 
-cujos elementos são propriedades que desejamos incluir, processar, armazenar, 
-gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
-
-> O sistema proposto para a "Devcom Projetos conterá as informacões aqui detalhadas. Dos Projetos serão armazenados o número, nome e cidade. Dos Departamentos serão armazenados o número e nome. O cliente destacou que cada projeto pode ter vários departamentos auxiliando no seu desenvolvimento, e cada departamento pode estar envolvido em vários projetos. Os dados relativos aos empregados que serão armazenados são: rg, nome, cpf, salário, data inicial do salario e supervisor de cada empregado. É importante destacar que cada empregado pode ser supervisionado por outro empregado, e obrigatoriamente deve estar alocado a um único departamento, mas pode gerenciar vários departamentos ou não gerenciar nenhum. Um empregado também pode participar de vários projetos, caso seja necessário, mas não precisa obrigatoriamente estar alocado em algum projeto. Com relação aos dependentes serão armazenadas as informações de nome do dependente, data de nascimento, sexo e grau de parentesco. Cada empregado pode ter vários dependentes, mas um dependente esta associado apenas a um único empregado. Com relação ao histórico de salário devemos armazenar as informações de valor do salário, data de início do salário no período e data final do salário no período. É importante lembrar que cada funcionario pode ter diversos eventos de histórico de salário associados a ele visto que este dado pode ser alterado várias vezes. 
+> Os clientes desejam um sistema informatizado que promova a divulgação de pequenos serviços domésticos. O sistema deve fazer o cadastro de usuários, seja ele um prestador de serviço, alguém que esteja a procura de um serviço ou até ambos, certificando que os clientes são maiores de idade, e posteriormente permitirá a comunicação entre eles. O cadastro deverá ser validado solicitando ao usuário documentos de comprovação por meio de fotos.
+Um anúncio de serviço deverá conter o nome, tipo do serviço, descrição do serviço, preço, horários disponíveis, localização, contato e modos de pagamento. Um usuário poderá iniciar uma conversa com o prestador de serviço caso esteja interessado no trabalho e os serviços poderão ser filtrados por categoria/tipo, avaliação dos clientes, distância, avaliação, preço e disponibilidade.
+O horário, data, preço, local e o modo de pagamento do serviço serão combinados pelo chat e, após a obtenção de todas as informações, o prestador de serviço deverá preencher o agendamento e enviar para a confirmação do usuário. Assim, a confirmação de agendamento será composta pelas informações principais do atendimento, como o nome do contratante, a localização, o preço que foi combinado, o horário e data marcadas para a realização do serviço e a descrição do mesmo. Notificações de lembrete e confirmação de serviços poderão ser realizadas via email, telefone ou pelo próprio sistema, sendo opcional para o usuário.
+Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo de parâmetro para o ranqueamento de avaliação.
+ 
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
-Neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
+<p align="center">
+  <img width="356" height="725" src=https://github.com/maykew/trabalho_bd1/blob/master/images/Tela%20Login.png?raw=true "Title">
+</p>
 
-Sugestão: https://balsamiq.com/products/mockups/<br>
+![Arquivo PDF do Protótipo Balsamiq feito para o Sistema de Contratação de Serviços](https://github.com/maykew/trabalho_bd1/blob/master/arquivos/TelasSistemaContratacaodeServicos.pdf?raw=true "Sistema de Contratação de Serviços")
 
-![Alt text](https://github.com/discipbd1/trab01/blob/master/balsamiq.png?raw=true "Title")
-![Arquivo PDF do Protótipo Balsamiq feito para Empresa Devcom](https://github.com/discipbd1/trab01/blob/master/arquivos/EmpresaDevcom.pdf?raw=true "Empresa Devcom")
+
 #### 4.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
     b) Crie uma lista com os 5 principais relatórios que poderão ser obtidos por meio do sistema proposto!
     
-> A Empresa DevCom precisa inicialmente dos seguintes relatórios:
-* Relatório que informe quais são os gerentes de cada departamento incluindo as seguintes informações: número do departamento,  nome do departamento, e nome do gerente.
-* Relatório de empregados por projeto incluindo as seguintes informações: número do projeto, nome do projeto, rg do empregado, nome do empregado e quantidade de horas de trabalho do empregado alocadas ao projeto.
-* Relatório de empregados com dependentes incluindo as seguintes informações: rg do empregado, nome do empregado, nome do dependente, tipo de relação, data de nascimento do dependente e sexo do dependente.
-* Relatório com a quantidade de empregados por cada departamento incluindo as seguintes informações: nome do departamento, supervisor e quantidade de empregados alocados no departamento.
-* Relatório de supervisores e supervisionados incluindo as seguintes informações: nome do supervisor e nome do supervisionado.
- 
+> Os "clientes" precisam inicialmente dos seguintes relatórios:
+* Relatório que informe quais prestadores de serviço oferecem serviços nas cidades dos clientes.
+* Relatatório de usuários prestadores de serviço incluindo as seguintes informações: nome do usuário, nome do serviço, descrição, catergoria, preço e contato.
+* Relatório de serviços agendados para um determinado dia incluindo as seguintes informações: nome do cliente, descrição do serviço, data, hora e localização.
+* Relatório contendo as avaliações e comentários recebidos por um determinado serviço.
+* Relatório que informe as informações de contato de um cliente incluindo: nome do cliente, cidade, bairro, endereço e número. 
  
 #### 4.2 TABELA DE DADOS DO SISTEMA:
     a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas/registros de dados.
@@ -50,7 +49,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     e deve ser criada antes do modelo conceitual
     c) Após criada esta tabela não deve ser modificada, pois será comparada com os resultados finais na conclusão do trabalho
     
-![Exemplo de Tabela de dados da Empresa Devcom](https://github.com/discipbd1/trab01/blob/master/arquivos/TabelaEmpresaDevCom_sample.xlsx?raw=true "Tabela - Empresa Devcom")
+![Tabela de dados do Sistema de Contratação de Serviços](https://github.com/maykew/trabalho_bd1/blob/master/arquivos/TabelasSistemaContratacaodeServicos.xlsx?raw=true "Tabela - Sistema de Contratação de Serviços")
     
 ### 5.MODELO CONCEITUAL<br>
     A) NOTACAO ENTIDADE RELACIONAMENTO 
@@ -58,7 +57,7 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
         * O protótipo deve possui no mínimo duas relações N para N
         * o mínimo de entidades do modelo conceitual será igual a 5
         
-![Alt text](https://github.com/discipbd1/trab01/blob/master/images/concept_sample.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/maykew/trabalho_bd1/blob/master/images/modelo_conceitual.png?raw=true "Modelo Conceitual")
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
     C) QUALIDADE 
@@ -67,18 +66,68 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
         e tuplas falsas
     
         
-    
 #### 5.1 Validação do Modelo Conceitual
     [Grupo01]: [Nomes dos que participaram na avaliação]
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 Descrição dos dados 
-    [objeto]: [descrição do objeto]
     
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
-
+    USUARIO: Tabela que armazena as informações relativas ao cadastro dos usuários no Sistema.
+    codigo: campo que armazena o número do código de cada usuário cadastrado no sistema.
+    nome_usuario: campo que armazena o nome de usuário de cada cliente cadastrado no sistema.
+    email: campo que armazena o endereço de email de cada usuario.
+    sexo: campo que armazena o sexo de cada usuario cadastrado no sistema.
+    senha: campo que armazena a senha cadastrada pelo usuairo.
+    nome_completo: campo que armazena o nome completo do cliente.
+    data_nascimento: campo que armazena a data de nascimento do cliente.
+    cpf: campo que armazena o número de Cadastro de Pessoa Física para cada usuário cadastrado no Sistema.
+    data_cadastro: campo que armazena a data em que o usuário se cadastrou no Sistema.
+    
+    SERVICO: Tabela que armazena as informações relativas ao serviços anunciados no Sistema.
+    codigo: campo que armazena o 
+    nome: campo que armazena o nome do serviço anunciado no Sistema.
+    descricao: campo que armazena a descrição de cada serviço anunciado no Sistema.
+    preco: campo que armazena a preço de cada serviço anunciado no Sistema. 
+    dias_disponiveis: campo que armazena os dias que o prestador do serviço tem disponivel para realizar o serviço.
+    horarios_disponiveis: campo que armazena os horarios que o prestador de serviço tem disponivel para realizar o serviço.
+    modo_pagamento: campo que armazena o modo de pagamento de cada serviço.
+    data_publicacao: campo que armazena a data em que o anuncio do serviço foi publicado.
+    
+    TELEFONE: Tabela que armazena as informações relativas aos telefones dos usuários cadastrados no Sistema.
+    codigo: campo que armazena o codigo de cada usuário.
+    telefone: campo que armazena o numero de telefone de cada usuário.
+    
+    ENDERECO: Tabela que armazena as informações relativas aos endereços de cada usuário cadastrado no Sistema.
+    codigo: campo que armazena o codigo do endereço do usuário.
+    codigo_usuario: campo que armazena o número do código de cada usuário cadastrado.
+    cep: campo que armazena o número do CEP de cada usuário.
+    bairro: campo que armazena o nome do bairro de cada usuário.
+    endereco: campo que armazena o endereço de cada usuário.
+    numero: campo que armazena o numero da casa de cada usuário.
+    complemento: campo que armazena o complemento do endereço de cada usuário.
+    cidade: campo que armazena a cidade de cada usuário.
+    
+    MODO_PAGAMENTO: Tabela que armazena os tipos de pagamento possíveis.
+    codigo: campo que armazena o codigo de cada tipo de pagamento.
+    modo: campo que armazena a descrição do modo de pagamento.
+    
+    LOCAL_AGENDADO: Tabela que armazena as informações relativas aos locais que os clientes agendaram os serviços.
+    codigo_agendamento: campo que armazena o codigo de cada agendamento cadastrado.
+    codigo_endereco: campo que armazena o codigo de cada endereço cadastrado.
+    
+    AVALIACOES: Tabela que armazena as informações relativas as avaliações feitas pelos clientes ao fim de cada serviço.
+    codigo_servico: campo que armazena o codigo de cada serviço cadastrado no sistema.
+    avaliacao: campo que armazena as avaliações feitas pelos clientes sobre o serviço contratado.
+    comentarios: campo que armazena os comentários que cada cliente faz sobre o serviço contratado.
+    
+    AGENDAMENTO: Tabela que armazena as informações relativas ao agendamneto da contratação de um serviço.
+    Cod_agendamento: campo que armazena o codigo de agendamento.
+    Cod_servico: campo que armazena o codigo do serviço contratado.
+    Cod_cliente: campo que armazena o codigo do cliente que contratou o serviço.
+    Cod_prestador: campo que armazena o codigo do prestador do serviço.
+    data_agendada: campo que armazena a data em que o serviço vai ser realizado.
+    hora_agendada: campo que armazena o horario em que o serviço vai ser realizado.
+ 
 #### 5.3 Principais fluxos de informação e principais tabelas do sistema     
     a) Quais os principais fluxos de dados de informação no sistema em densenvolvimento (mínimo 3)
     b) Quais as tabelas que conterão mais dados no sistema em densenvolvimento (mínimo 3)
