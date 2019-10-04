@@ -124,12 +124,12 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     comentarios: campo que armazena os comentários que cada cliente faz sobre o serviço contratado.
     
     AGENDAMENTO: Tabela que armazena as informações relativas ao agendamneto da contratação de um serviço.
-    Cod_agendamento: campo que armazena o codigo de agendamento.
-    Cod_servico: campo que armazena o codigo do serviço contratado.
-    Cod_cliente: campo que armazena o codigo do cliente que contratou o serviço.
-    Cod_prestador: campo que armazena o codigo do prestador do serviço.
-    data_agendada: campo que armazena a data em que o serviço vai ser realizado.
-    hora_agendada: campo que armazena o horario em que o serviço vai ser realizado.
+    codigo: campo que armazena o codigo de agendamento.
+    codigo_servico: campo que armazena o codigo do serviço contratado.
+    codigo_cliente: campo que armazena o codigo do cliente que contratou o serviço.
+    codigo_prestador: campo que armazena o codigo do prestador do serviço.
+    data: campo que armazena a data em que o serviço vai ser realizado.
+    hora: campo que armazena o horario em que o serviço vai ser realizado.
  
 #### 5.3 Principais fluxos de informação e principais tabelas do sistema  
 > Os principais fluxos de dados de informação e, ainda, conterão mais dados no sistema ContrateiServiços são as tabelas USUARIO, SERVICO e AGENDAMENTO. As principais tabelas no sistema são USUARIO, SERVICO, AGENDAMENTO, ENDERECO e TELEFONE.
