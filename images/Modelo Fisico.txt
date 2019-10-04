@@ -1,0 +1,85 @@
+CREATE TABLE Usuario (
+    codigo int PRIMARY KEY,
+    nome_usuario varchar(30),
+    sexo char,
+    senha varchar(30),
+    nome_completo varchar(60),
+    data_nascimento date,
+    cpf varchar(14),
+    data_cadastro date,
+    email varchar(50)
+);
+
+CREATE TABLE Servico (
+    codigo int PRIMARY KEY,
+    nome varchar(60),
+    descricao varchar(500),
+    preco decimal(12,2),
+    dias_disponiveis varchar(60),
+    horarios_disponiveis varchar(60),
+    modo_pagamento int,
+    data_publicacao date
+);
+
+CREATE TABLE Telefone (
+    codigo int PRIMARY KEY,
+    telefone varchar(14)
+);
+
+CREATE TABLE Endereco (
+    codigo int PRIMARY KEY,
+    codigo_usuario int,
+    cep varchar(9),
+    bairro varchar(40),
+    endereco varchar(100),
+    numero int,
+    complemento varchar(30),
+    cidade varchar(50)
+);
+
+CREATE TABLE usuario_servico (
+    codigo_usuario int,
+    codigo_servico int
+);
+
+CREATE TABLE Agendamento (
+    codigo int PRIMARY KEY,
+    codigo_cliente int,
+    codigo_prestador int,
+    codigo_servico int,
+    data date,
+    hora varchar(5)
+);
+ 
+ALTER TABLE Telefone ADD CONSTRAINT FK_Telefone_2
+    FOREIGN KEY (codigo)
+    REFERENCES Usuario (codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Endereco ADD CONSTRAINT FK_Endereco_2
+    FOREIGN KEY (codigo)
+    REFERENCES Usuario (codigo);
+ 
+ALTER TABLE usuario_servico ADD CONSTRAINT FK_usuario_servico_1
+    FOREIGN KEY (codigo_usuario)
+    REFERENCES Usuario (codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE usuario_servico ADD CONSTRAINT FK_usuario_servico_2
+    FOREIGN KEY (codigo_servico)
+    REFERENCES Servico (codigo)
+    ON DELETE SET NULL;
+ 
+ALTER TABLE Agendamento ADD CONSTRAINT FK_Agendamento_2
+    FOREIGN KEY (codigo_cliente)
+    REFERENCES Usuario (codigo)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Agendamento ADD CONSTRAINT FK_Agendamento_3
+    FOREIGN KEY (codigo_prestador)
+    REFERENCES Usuario (codigo);
+ 
+ALTER TABLE Agendamento ADD CONSTRAINT FK_Agendamento_4
+    FOREIGN KEY (codigo_servico)
+    REFERENCES Servico (codigo)
+    ON DELETE SET NULL;
