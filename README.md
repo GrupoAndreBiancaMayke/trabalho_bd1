@@ -46,10 +46,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ![Tabela de dados do Sistema de Contratação de Serviços](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/TabelasSistemaContratacaodeServicos.xlsx?raw=true "Tabela - Sistema de Contratação de Serviços")
     
 ### 5.MODELO CONCEITUAL<br>
-    A) NOTACAO ENTIDADE RELACIONAMENTO 
-        * Para nosso prótótipo limitaremos o modelo conceitual nas 6 principais entidades do escopo
-        * O protótipo deve possui no mínimo duas relações N para N
-        * o mínimo de entidades do modelo conceitual será igual a 5
+* NOTACAO ENTIDADE RELACIONAMENTO 
         
 <p align="center">
   <img width="701" height="547" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/modelo_conceitual.png?raw=true "Modelo Conceitual")
@@ -60,8 +57,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 <p align="center">
   <img width="746" height="527" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/notacao_UML.jpg
 </p>
- 
-    B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
+
     C) QUALIDADE 
         Garantir que a semântica dos atributos seja clara no esquema
         Criar o esquema de forma a garantir a redução de informação redundante, possibilidade de valores null, 
@@ -130,7 +126,8 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     data: campo que armazena a data em que o serviço vai ser realizado.
     hora: campo que armazena o horario em que o serviço vai ser realizado.
  
-#### 5.3 Principais fluxos de informação e principais tabelas do sistema  
+#### 5.3 Principais fluxos de informação e principais tabelas do sistema 
+
 > Os principais fluxos de dados de informação e, ainda, conterão mais dados no sistema ContrateiServiços são as tabelas USUARIO, SERVICO e AGENDAMENTO. As principais tabelas no sistema são USUARIO, SERVICO, AGENDAMENTO, ENDERECO e TELEFONE.
 
 ### 6	MODELO LÓGICO<br>
