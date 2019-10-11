@@ -91,7 +91,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     modo_pagamento: campo que armazena o modo de pagamento de cada serviço.
     data_publicacao: campo que armazena a data em que o anuncio do serviço foi publicado.
     
-    TELEFONE: Tabela que armazena as informações relativas aos telefones dos usuários cadastrados no Sistema.
+    CONTATO: Tabela que armazena as informações relativas aos telefones dos usuários cadastrados no Sistema.
     codigo: campo que armazena o codigo de cada usuário.
     telefone: campo que armazena o numero de telefone de cada usuário.
     
