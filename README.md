@@ -102,7 +102,6 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     bairro: campo que armazena o nome do bairro de cada usuário.
     endereco: campo que armazena o endereço de cada usuário.
     numero: campo que armazena o numero da casa de cada usuário.
-    complemento: campo que armazena o complemento do endereço de cada usuário.
     cidade: campo que armazena a cidade de cada usuário.
     
     MODO_PAGAMENTO: Tabela que armazena os tipos de pagamento possíveis.
