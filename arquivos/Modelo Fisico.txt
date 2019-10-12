@@ -14,14 +14,12 @@ CREATE TABLE Servico (
     codigo int PRIMARY KEY,
     nome varchar(60),
     descricao varchar(500),
-    preco decimal(12,2),
-    dias_disponiveis varchar(60),
-    horarios_disponiveis varchar(60),
+    preco decimal(10,2),
     modo_pagamento int,
     data_publicacao date
 );
 
-CREATE TABLE Telefone (
+CREATE TABLE Contato (
     codigo int PRIMARY KEY,
     telefone varchar(14)
 );
@@ -33,8 +31,32 @@ CREATE TABLE Endereco (
     bairro varchar(40),
     endereco varchar(100),
     numero int,
-    complemento varchar(30),
     cidade varchar(50)
+);
+
+CREATE TABLE Agendamento (
+    codigo int PRIMARY KEY,
+    codigo_cliente int,
+    codigo_prestador int,
+    codigo_endereco int,
+    codigo_servico int,
+    hora int,
+    data date
+);
+
+CREATE TABLE Dias_disponiveis (
+    codigo_dia int PRIMARY KEY,
+    dia varchar(20)
+);
+
+CREATE TABLE Horas_disponiveis (
+    codigo_hora int PRIMARY KEY,
+    hora varchar(5)
+);
+
+CREATE TABLE Modo_pagamento (
+    codigo int PRIMARY KEY,
+    modo varchar(50)
 );
 
 CREATE TABLE usuario_servico (
@@ -42,22 +64,52 @@ CREATE TABLE usuario_servico (
     codigo_servico int
 );
 
-CREATE TABLE Agendamento (
-    codigo int PRIMARY KEY,
-    codigo_cliente int,
-    codigo_prestador int,
+CREATE TABLE servico_dias (
     codigo_servico int,
-    data date,
-    hora varchar(5)
+    codigo_dia int
+);
+
+CREATE TABLE servico_horas (
+    codigo_servico int,
+    codigo_hora int
 );
  
-ALTER TABLE Telefone ADD CONSTRAINT FK_Telefone_2
+ALTER TABLE Servico ADD CONSTRAINT FK_Servico_2
+    FOREIGN KEY (modo_pagamento)
+    REFERENCES Modo_pagamento (codigo)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Contato ADD CONSTRAINT FK_Contato_2
     FOREIGN KEY (codigo)
     REFERENCES Usuario (codigo)
     ON DELETE RESTRICT;
  
 ALTER TABLE Endereco ADD CONSTRAINT FK_Endereco_2
-    FOREIGN KEY (codigo)
+    FOREIGN KEY (codigo_usuario)
+    REFERENCES Usuario (codigo);
+ 
+ALTER TABLE Agendamento ADD CONSTRAINT FK_Agendamento_2
+    FOREIGN KEY (codigo_cliente)
+    REFERENCES Usuario (codigo)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Agendamento ADD CONSTRAINT FK_Agendamento_3
+    FOREIGN KEY (codigo_endereco)
+    REFERENCES Endereco (codigo)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Agendamento ADD CONSTRAINT FK_Agendamento_4
+    FOREIGN KEY (codigo_servico)
+    REFERENCES Servico (codigo)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Agendamento ADD CONSTRAINT FK_Agendamento_5
+    FOREIGN KEY (hora)
+    REFERENCES Horas_disponiveis (codigo_hora)
+    ON DELETE CASCADE;
+ 
+ALTER TABLE Agendamento ADD CONSTRAINT FK_Agendamento_6
+    FOREIGN KEY (codigo_prestador)
     REFERENCES Usuario (codigo);
  
 ALTER TABLE usuario_servico ADD CONSTRAINT FK_usuario_servico_1
@@ -70,16 +122,22 @@ ALTER TABLE usuario_servico ADD CONSTRAINT FK_usuario_servico_2
     REFERENCES Servico (codigo)
     ON DELETE SET NULL;
  
-ALTER TABLE Agendamento ADD CONSTRAINT FK_Agendamento_2
-    FOREIGN KEY (codigo_cliente)
-    REFERENCES Usuario (codigo)
+ALTER TABLE servico_dias ADD CONSTRAINT FK_servico_dias_1
+    FOREIGN KEY (codigo_dia)
+    REFERENCES Dias_disponiveis (codigo_dia)
     ON DELETE RESTRICT;
  
-ALTER TABLE Agendamento ADD CONSTRAINT FK_Agendamento_3
-    FOREIGN KEY (codigo_prestador)
-    REFERENCES Usuario (codigo);
+ALTER TABLE servico_dias ADD CONSTRAINT FK_servico_dias_2
+    FOREIGN KEY (codigo_servico)
+    REFERENCES Servico (codigo)
+    ON DELETE SET NULL;
  
-ALTER TABLE Agendamento ADD CONSTRAINT FK_Agendamento_4
+ALTER TABLE servico_horas ADD CONSTRAINT FK_servico_horas_1
+    FOREIGN KEY (codigo_hora)
+    REFERENCES Horas_disponiveis (codigo_hora)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE servico_horas ADD CONSTRAINT FK_servico_horas_2
     FOREIGN KEY (codigo_servico)
     REFERENCES Servico (codigo)
     ON DELETE SET NULL;
