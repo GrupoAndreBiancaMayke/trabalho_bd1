@@ -139,7 +139,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
   <img width="326" height="574" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Modelo_Fisico.png?raw=true "Modelo Fisico">
 </p> 
 
-![Arquivo txt do Modelo Fisico feito para o Sistema de Contratação de Serviços](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/Modelo%20Fisico.txt?raw=true "Modelo Fisico")
+![Arquivo txt do Modelo Fisico feito para o Sistema de Contratação de Serviços](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ModeloFisico?raw=true "Modelo Fisico")
 
 >## Marco de Entrega 01 em:<br>
         
