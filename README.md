@@ -106,10 +106,6 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     cod_modo: campo que armazena o codigo de cada tipo de pagamento.
     modo_pagamento: campo que armazena a descrição do modo de pagamento.
 
-    LOCAL_AGENDADO: Tabela que armazena as informações relativas aos locais que os clientes agendaram os serviços. ******
-    codigo_agendamento: campo que armazena o codigo de cada agendamento cadastrado.
-    codigo_endereco: campo que armazena o codigo de cada endereço cadastrado.
-
     AVALIACOES: Tabela que armazena as informações relativas as avaliações feitas pelos clientes ao fim de cada serviço.
     cod_servico: campo que armazena o codigo de cada serviço cadastrado no sistema.
     avaliacoes_recebidas: campo que armazena as avaliações feitas pelos clientes sobre o serviço contratado.
