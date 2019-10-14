@@ -16,7 +16,8 @@ CREATE TABLE Servico (
     descricao varchar(500),
     preco decimal(10,2),
     modo_pagamento int,
-    data_publicacao date
+    data_publicacao date,
+    modo_pagamento int
 );
 
 CREATE TABLE Contato (
@@ -72,6 +73,12 @@ CREATE TABLE servico_dias (
 CREATE TABLE servico_horas (
     codigo_servico int,
     codigo_hora int
+);
+
+CREATE TABLE Avaliacoes (
+    cod_servico int PRIMARY KEY,
+    avaliacoes_recebidas int,
+    comentarios_recebidos varchar(150)
 );
  
 ALTER TABLE Servico ADD CONSTRAINT FK_Servico_2
@@ -141,3 +148,7 @@ ALTER TABLE servico_horas ADD CONSTRAINT FK_servico_horas_2
     FOREIGN KEY (codigo_servico)
     REFERENCES Servico (codigo)
     ON DELETE SET NULL;
+ 
+ALTER TABLE Avaliacoes ADD CONSTRAINT FK_Avaliacoes_2
+    FOREIGN KEY (cod_servico)
+    REFERENCES Servico (codigo);
