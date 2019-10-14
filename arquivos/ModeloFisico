@@ -16,7 +16,7 @@ CREATE TABLE Servico (
     descricao varchar(500),
     preco decimal(10,2),
     modo_pagamento int,
-    data_publicacao date,
+    data_publicacao date
 );
 
 CREATE TABLE Contato (
