@@ -1,13 +1,13 @@
 CREATE TABLE Usuario (
     codigo int PRIMARY KEY,
     nome_usuario varchar(30),
+    email varchar(50),
     sexo char,
     senha varchar(30),
     nome_completo varchar(60),
     data_nascimento date,
     cpf varchar(14),
-    data_cadastro date,
-    email varchar(50)
+    data_cadastro date
 );
 
 CREATE TABLE Servico (
@@ -20,7 +20,7 @@ CREATE TABLE Servico (
 );
 
 CREATE TABLE Contato (
-    codigo int PRIMARY KEY,
+    codigo int,
     telefone varchar(14)
 );
 
@@ -36,12 +36,12 @@ CREATE TABLE Endereco (
 
 CREATE TABLE Agendamento (
     codigo int PRIMARY KEY,
+    codigo_servico int,
     codigo_cliente int,
     codigo_prestador int,
     codigo_endereco int,
-    codigo_servico int,
-    hora int,
-    data date
+    data date,
+    hora int
 );
 
 CREATE TABLE Dias_disponiveis (
@@ -75,7 +75,7 @@ CREATE TABLE servico_horas (
 );
 
 CREATE TABLE Avaliacoes (
-    cod_servico int PRIMARY KEY,
+    cod_servico int,
     avaliacoes_recebidas int,
     comentarios_recebidos varchar(150)
 );
