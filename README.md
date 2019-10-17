@@ -116,6 +116,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     cod_servico: campo que armazena o codigo do serviço contratado.
     cod_cliente: campo que armazena o codigo do cliente que contratou o serviço.
     cod_prestador: campo que armazena o codigo do prestador do serviço.
+    cod_endereco: campo que armazena o codigo do endereço que será realizado o serviço.
     data_agendada: campo que armazena a data em que o serviço vai ser realizado.
     hora_agendada: campo que armazena o horario em que o serviço vai ser realizado.
 
