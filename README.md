@@ -161,6 +161,13 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
         b) Criar um novo banco de dados para testar a restauracao 
         (em caso de falha na restauração o grupo não pontuará neste quesito)
         c) formato .SQL
+        
+ <p align="center">
+ <img width="1052" height="572"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/insert%20tabelas.PNG?raw=true "Dados Tabela  Usuario">
+</p> 
+
+![Arquivo txt do Insert aplicado nas tabelas de banco de dados](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/insert%20dos%20dados?raw=true "Insert nas Tabelas")
+        
 
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
