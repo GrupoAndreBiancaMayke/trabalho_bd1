@@ -172,6 +172,66 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+   * SELECT * FROM USUARIO;
+   <p align="center">
+ <img width="1045" height="704"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_usuario.png?raw=true "Dados Tabela  Usuario">
+</p> 
+
+   * SELECT * FROM SERVICO;
+   <p align="center">
+ <img width="1045" height="374"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_servico.png?raw=true "Dados Tabela  Servico">
+</p> 
+     
+   * SELECT * FROM CONTATO;
+   <p align="center">
+ <img width="603" height="779"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_contato.png?raw=true "Dados Tabela Contato">
+</p> 
+     
+   * SELECT * FROM ENDERECO;
+   <p align="center">
+ <img width="1045" height="676"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_endereco.png?raw=true "Dados Tabela Endereco">
+</p> 
+     
+   * SELECT * FROM MODO_PAGAMENTO;
+   <p align="center">
+ <img width="529" height="106"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_modo_pagamento.png?raw=true "Dados Tabela Modo Pagamento">
+</p> 
+     
+   * SELECT * FROM AVALIACOES; 
+   <p align="center">
+ <img width="874" height="345"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_avaliacoes.png?raw=true "Dados Tabela Avaliacoes">
+</p> 
+     
+   * SELECT * FROM AGENDAMENTO;
+   <p align="center">
+ <img width="1045" height="608"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_agendamento.png?raw=true "Dados Tabela Agendamento">
+</p> 
+     
+   * SELECT * FROM DIAS_DISPONIVEIS;
+   <p align="center">
+ <img width="632" height="257"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_dias_disponiveis.png?raw=true "Dados Tabela Dias disponiveis">
+</p> 
+     
+   * SELECT * FROM SERVICO_DIAS;
+   <p align="center">
+ <img width="726" height="667"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_servico_dias.png?raw=true "Dados Tabela Servico dias">
+</p> 
+     
+   * SELECT * FROM USUARIO_SERVICO;
+   <p align="center">
+ <img width="693" height="354"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_usuario_servico.png?raw=true "Dados Tabela Usuario Servico">
+</p> 
+     
+   * SELECT * FROM HORAS_DISPONIVEIS;
+   <p align="center">
+ <img width="835" height="453"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_horas_disponiveis.png?raw=true "Dados Tabela Horas disponiveis">
+</p> 
+     
+   * SELECT * FROM SERVICO_HORAS;
+   <p align="center">
+ <img width="745" height="676"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_servico_horas.png?raw=true "Dados Tabela Servico horas">
+</p> 
+
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
