@@ -190,7 +190,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
      
    * SELECT * FROM ENDERECO;
    <p align="center">
- <img width="1045" height="676"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_endereco.png?raw=true "Dados Tabela Endereco">
+ <img width="930" height="239"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_endereco.PNG?raw=true "Dados Tabela Endereco">
 </p> 
      
    * SELECT * FROM MODO_PAGAMENTO;
@@ -200,7 +200,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
      
    * SELECT * FROM AVALIACOES; 
    <p align="center">
- <img width="874" height="345"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_avaliacoes.png?raw=true "Dados Tabela Avaliacoes">
+ <img width="790" height="362"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_avaliacoes.PNG?raw=true "Dados Tabela Avaliacoes">
 </p> 
      
    * SELECT * FROM AGENDAMENTO;
@@ -210,7 +210,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
      
    * SELECT * FROM DIAS_DISPONIVEIS;
    <p align="center">
- <img width="632" height="257"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_dias_disponiveis.png?raw=true "Dados Tabela Dias disponiveis">
+ <img width="552" height="264"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_dias_disponiveis.PNG?raw=true "Dados Tabela Dias disponiveis">
 </p> 
      
    * SELECT * FROM SERVICO_DIAS;
