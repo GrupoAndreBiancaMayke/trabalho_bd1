@@ -234,20 +234,107 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 </p> 
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+
+* SELECT nome_completo FROM usuario WHERE sexo = 'F';
+
+* SELECT nome, descricao FROM servico WHERE preco < 100;
+
+* SELECT bairro, endereco FROM endereco WHERE cidade = 'Vitoria';
+
+* SELECT avaliacoes_recebidas, comentarios_recebidos FROM avaliacoes WHERE avaliacoes_recebidas >= 3;
+
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos 
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+a)  
+* SELECT nome, descricao FROM servico WHERE preco IS NOT NULL; 
+
+* SELECT nome_completo FROM usuario WHERE data_nascimento >= '1990/01/01' AND data_nascimento <= '1999/12/31';
+
+* SELECT nome, descricao FROM servico WHERE preco < 100 AND data_publicacao >= '2019/01/01';
+
+* SELECT bairro, endereco FROM endereco WHERE cidade = 'Serra' OR cidade = 'Vila Velha';
+
+* SELECT bairro, endereco FROM endereco WHERE codigo_usuario IS NOT NULL; 
+
+b)
+* SELECT nome, descricao, preco * 0.1 AS Desconto FROM servico;
+
+* SELECT nome, descricao, preco * 0.9 AS "Preço com desconto" FROM servico WHERE preco * 0.9 < 90;
+
+* SELECT nome, descricao, preco * 1.05 AS "Preço com inflação de 5%" FROM servico;
+
+c)
+* SELECT nome_completo AS Nome, nome_usuario AS Login FROM usuario;
+
+* SELECT COUNT(*) AS Qtd_usuarios FROM usuario;
+
+* SELECT nome_completo AS Nome, AGE(CURRENT_DATE,data_nascimento) AS Idade FROM usuario;
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
+ 
+a) 
+* SELECT nome_completo FROM usuario WHERE nome_completo ILIKE 'm%';
+
+* SELECT nome_completo FROM usuario WHERE nome_completo LIKE '%a';
+
+* SELECT nome_completo, email FROM usuario WHERE email LIKE '%yahoo%';
+
+* SELECT telefone FROM contato WHERE telefone LIKE '(27)%';
+
+* SELECT nome_usuario FROM usuario WHERE usuario LIKE '_______';
+
+* SELECT telefone FROM contato WHERE telefone LIKE '(28)%';
+
+* SELECT nome_completo, email FROM usuario WHERE email LIKE '%hotmail%';
+
+b)
+* SELECT nome_completo, CURRENT_DATE-(data_cadastro) AS "Dias no sistema" FROM USUARIO; - TESTAR DE NOVO
+
+* SELECT nome, descricao FROM servico WHERE CURRENT_DATE-data_publicacao < 180;
+
+* SELECT COUNT(*) AS "Quantidade de servicos nos ultimos 6 meses" FROM servico WHERE CURRENT_DATE-data_publicacao < 180;
+
+* SELECT codigo_servico, COUNT(*) AS Qtd_Agendamentos_ultimos_3meses FROM agendamento WHERE CURRENT_DATE-data < 91 GROUP BY codigo_servico;
+
+* SELECT nome, CURRENT_DATE-data_publicacao AS Tempo_no_sistema FROM servico;
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
+
+* UPDATE servico SET modo_pagamento = 002 WHERE codigo = 009;
+
+* UPDATE agendamento SET data = '2019/11/06'  WHERE codigo = 20;
+
+* DELETE FROM agendamento WHERE codigo_prestador = 17;
+
+* INSERT INTO agendamento VALUES (020,    002, 016, 017, 016, '2019/11/05', 009);
+
+* DELETE FROM agendamento WHERE codigo = 19;
+
+* INSERT INTO agendamento VALUES (019, 009, 015, 005, 015, '2019/11/07',001);
+
+* UPDATE servico SET modo_pagamento = 001 WHERE codigo = 009;
+
+* UPDATE contato SET telefone = '(27) 3354-1204' WHERE codigo = 012;
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+        
+* SELECT nome AS "Nome Servico", usuario.nome_completo AS "Nome Cliente", prestador.nome_completo AS "Nome Prestador", hora,data FROM servico INNER JOIN usuario_servico ON (usuario_servico.codigo_usuario = servico.codigo) INNER JOIN usuario ON (usuario_servico.codigo_usuario = usuario.codigo) INNER JOIN agendamento ON (agendamento.codigo = usuario.codigo) INNER JOIN usuario AS prestador ON (prestador.codigo = agendamento.codigo_prestador);
+
+* SELECT DISTINCT cidade, servico.nome FROM usuario INNER JOIN endereco ON (usuario.codigo = endereco.codigo_usuario) INNER JOIN usuario_servico AS us ON (usuario.codigo = us.codigo_usuario) INNER JOIN servico ON (us.codigo_servico = servico.codigo);
+
+* SELECT usuario.nome_completo AS "Prestador", servico.nome AS "Nome do servico", COUNT(*) AS "Quantidade de agendamentos feitos" FROM usuario INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_prestador) INNER JOIN servico ON (agendamento.codigo_servico = servico.codigo) GROUP BY usuario.nome_completo, servico.nome ORDER BY COUNT(*) DESC;
+
+* SELECT nome, descricao, avaliacoes_recebidas, comentarios_recebidos FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.cod_servico);
+
+* SELECT servico.nome, telefone, min(avaliacoes_recebidas) AS "Menor avaliacao", max(avaliacoes_recebidas) AS "Maior avaliacao" FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.cod_servico) INNER JOIN usuario_servico ON (servico.codigo = usuario_servico.codigo_servico) INNER JOIN usuario ON (usuario.codigo = usuario_servico.codigo_usuario) INNER JOIN contato ON (usuario.codigo = contato.codigo) GROUP BY servico.nome, telefone;
+
+* FALTA 1
 
 >## Marco de Entrega 02 em:<br>
 
