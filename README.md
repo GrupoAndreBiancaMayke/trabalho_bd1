@@ -180,7 +180,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
    * SELECT * FROM SERVICO;
    <p align="center">
- <img width="1045" height="374"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_servico.png?raw=true "Dados Tabela  Servico">
+ <img width="935" height="383"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_servico.PNG?raw=true "Dados Tabela  Servico">
 </p> 
      
    * SELECT * FROM CONTATO;
@@ -190,12 +190,12 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
      
    * SELECT * FROM ENDERECO;
    <p align="center">
- <img width="930" height="239"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_endereco.PNG?raw=true "Dados Tabela Endereco">
+ <img width="633" height="404"          src=https://raw.githubusercontent.com/GrupoAndreBiancaMayke/trabalho_bd1/master/images/todos_os_dados_tabela_endereco.PNG?raw=true "Dados Tabela Endereco">
 </p> 
      
    * SELECT * FROM MODO_PAGAMENTO;
    <p align="center">
- <img width="529" height="106"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_modo_pagamento.png?raw=true "Dados Tabela Modo Pagamento">
+ <img width="439" height="114"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_modo_pagamento.PNG?raw=true "Dados Tabela Modo Pagamento">
 </p> 
      
    * SELECT * FROM AVALIACOES; 
