@@ -355,16 +355,34 @@ b)
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
         
 * SELECT nome AS "Nome Servico", usuario.nome_completo AS "Nome Cliente", prestador.nome_completo AS "Nome Prestador", hora,data FROM servico INNER JOIN usuario_servico ON (usuario_servico.codigo_usuario = servico.codigo) INNER JOIN usuario ON (usuario_servico.codigo_usuario = usuario.codigo) INNER JOIN agendamento ON (agendamento.codigo = usuario.codigo) INNER JOIN usuario AS prestador ON (prestador.codigo = agendamento.codigo_prestador);
+<p align="center">
+ <img width="926" height="259"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O1.PNG "JUNÇÃO E ORDENAÇÃO 1">
+</p>
 
 * SELECT DISTINCT cidade, servico.nome FROM usuario INNER JOIN endereco ON (usuario.codigo = endereco.codigo_usuario) INNER JOIN usuario_servico AS us ON (usuario.codigo = us.codigo_usuario) INNER JOIN servico ON (us.codigo_servico = servico.codigo);
+<p align="center">
+ <img width="629" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O2.PNG "JUNÇÃO E ORDENAÇÃO 2">
+</p>
 
-* SELECT usuario.nome_completo AS "Prestador", servico.nome AS "Nome do servico", COUNT(*) AS "Quantidade de agendamentos feitos" FROM usuario INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_prestador) INNER JOIN servico ON (agendamento.codigo_servico = servico.codigo) GROUP BY usuario.nome_completo, servico.nome ORDER BY COUNT(*) DESC; 
+* SELECT usuario.nome_completo AS "Prestador", servico.nome AS "Nome do servico", COUNT( * ) AS "Quantidade de agendamentos feitos" FROM usuario INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_prestador) INNER JOIN servico ON (agendamento.codigo_servico = servico.codigo) GROUP BY usuario.nome_completo, servico.nome ORDER BY COUNT( * ) DESC; 
+<p align="center">
+ <img width="815" height="447"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O3.PNG "JUNÇÃO E ORDENAÇÃO 3">
+</p>
 
 * SELECT nome, descricao, avaliacoes_recebidas, comentarios_recebidos FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.cod_servico);
+<p align="center">
+ <img width="908" height="489"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O4.PNG "JUNÇÃO E ORDENAÇÃO 4">
+</p>
 
 * SELECT servico.nome, telefone, min(avaliacoes_recebidas) AS "Menor avaliacao", max(avaliacoes_recebidas) AS "Maior avaliacao" FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.cod_servico) INNER JOIN usuario_servico ON (servico.codigo = usuario_servico.codigo_servico) INNER JOIN usuario ON (usuario.codigo = usuario_servico.codigo_usuario) INNER JOIN contato ON (usuario.codigo = contato.codigo) GROUP BY servico.nome, telefone;
+<p align="center">
+ <img width="876" height="366"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O5.PNG "JUNÇÃO E ORDENAÇÃO 5">
+</p>
 
-* SELECT cidade, COUNT(cidade) AS "Qtd de servicos na cidade" FROM usuario INNER JOIN endereco ON (usuario.codigo = endereco.codigo_usuario) INNER JOIN usuario_servico ON (usuario.codigo = usuario_servico.codigo_usuario) INNER JOIN servico ON (servico.codigo = usuario_servico.codigo_servico) GROUP BY cidade;
+* SELECT cidade, COUNT(cidade) AS "Qtd de servicos na cidade" FROM usuario INNER JOIN endereco ON (usuario.codigo = endereco.codigo_usuario) INNER JOIN usuario_servico ON (usuario.codigo = usuario_servico.codigo_usuario) INNER JOIN servico ON (servico.codigo = usuario_servico.codigo_servico) GROUP BY cidade ORDER BY COUNT(cidade);
+<p align="center">
+ <img width="657" height="260"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O6.PNG "JUNÇÃO E ORDENAÇÃO 6">
+</p>
 
 >## Marco de Entrega 02 em:<br>
 
