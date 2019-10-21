@@ -236,12 +236,24 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
 * SELECT nome_completo FROM usuario WHERE sexo = 'F';
+<p align="center">
+  <img width="309" height="415" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE1.PNG "Filtro Where 1"
+</p> 
 
 * SELECT nome, descricao FROM servico WHERE preco < 100;
+<p align="center">
+  <img width="571" height="178" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE2.PNG "Filtro Where 2"
+</p> 
 
 * SELECT bairro, endereco FROM endereco WHERE cidade = 'Vitoria';
+<p align="center">
+  <img width="520" height="195" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE3.PNG "Filtro Where 3"
+</p> 
 
 * SELECT avaliacoes_recebidas, comentarios_recebidos FROM avaliacoes WHERE avaliacoes_recebidas >= 3;
+<p align="center">
+  <img width="725" height="365" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE4.PNG "Filtro Where 4"
+</p> 
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
