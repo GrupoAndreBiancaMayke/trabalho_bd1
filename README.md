@@ -328,7 +328,7 @@ b)
 
 * SELECT DISTINCT cidade, servico.nome FROM usuario INNER JOIN endereco ON (usuario.codigo = endereco.codigo_usuario) INNER JOIN usuario_servico AS us ON (usuario.codigo = us.codigo_usuario) INNER JOIN servico ON (us.codigo_servico = servico.codigo);
 
-* SELECT usuario.nome_completo AS "Prestador", servico.nome AS "Nome do servico", COUNT(*) AS "Quantidade de agendamentos feitos" FROM usuario INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_prestador) INNER JOIN servico ON (agendamento.codigo_servico = servico.codigo) GROUP BY usuario.nome_completo, servico.nome ORDER BY COUNT(*) DESC;
+* SELECT usuario.nome_completo AS "Prestador", servico.nome AS "Nome do servico", COUNT(*) AS "Quantidade de agendamentos feitos" FROM usuario INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_prestador) INNER JOIN servico ON (agendamento.codigo_servico = servico.codigo) GROUP BY usuario.nome_completo, servico.nome ORDER BY COUNT(*) DESC; 
 
 * SELECT nome, descricao, avaliacoes_recebidas, comentarios_recebidos FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.cod_servico);
 
