@@ -317,20 +317,38 @@ b)
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
 * UPDATE servico SET modo_pagamento = 002 WHERE codigo = 009;
+<p align="center">
+ <img width="706" height="124"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO1.PNG "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 1">
+</p> 
 
 * UPDATE agendamento SET data = '2019/11/06'  WHERE codigo = 20;
+<p align="center">
+ <img width="992" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO2.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 2">
+</p>
 
 * DELETE FROM agendamento WHERE codigo_prestador = 17;
+<p align="center">
+ <img width="1021" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO3.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 3">
+</p>
 
 * INSERT INTO agendamento VALUES (020,    002, 016, 017, 016, '2019/11/05', 009);
 
 * DELETE FROM agendamento WHERE codigo = 19;
+<p align="center">
+ <img width="1021" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO4.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 4">
+</p>
 
 * INSERT INTO agendamento VALUES (019, 009, 015, 005, 015, '2019/11/07',001);
 
 * UPDATE servico SET modo_pagamento = 001 WHERE codigo = 009;
+<p align="center">
+ <img width="989" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO5.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 5">
+</p>
 
 * UPDATE contato SET telefone = '(27) 3354-1204' WHERE codigo = 012;
+<p align="center">
+ <img width="459" height="564"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO6.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 6">
+</p>
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
