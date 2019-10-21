@@ -334,7 +334,7 @@ b)
 
 * SELECT servico.nome, telefone, min(avaliacoes_recebidas) AS "Menor avaliacao", max(avaliacoes_recebidas) AS "Maior avaliacao" FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.cod_servico) INNER JOIN usuario_servico ON (servico.codigo = usuario_servico.codigo_servico) INNER JOIN usuario ON (usuario.codigo = usuario_servico.codigo_usuario) INNER JOIN contato ON (usuario.codigo = contato.codigo) GROUP BY servico.nome, telefone;
 
-* FALTA 1
+* SELECT cidade, COUNT(cidade) AS "Qtd de servicos na cidade" FROM usuario INNER JOIN endereco ON (usuario.codigo = endereco.codigo_usuario) INNER JOIN usuario_servico ON (usuario.codigo = usuario_servico.codigo_usuario) INNER JOIN servico ON (servico.codigo = usuario_servico.codigo_servico) GROUP BY cidade;
 
 >## Marco de Entrega 02 em:<br>
 
