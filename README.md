@@ -237,148 +237,175 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 * SELECT nome_completo FROM usuario WHERE sexo = 'F';
 <p align="center">
-  <img width="309" height="415" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE1.PNG "Filtro Where 1"
+  <img width="309" height="415" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE1.PNG?raw=true "Filtro Where 1"
 </p> 
 
 * SELECT nome, descricao FROM servico WHERE preco < 100;
 <p align="center">
-  <img width="571" height="178" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE2.PNG "Filtro Where 2"
+  <img width="571" height="178" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE2.PNG?raw=true "Filtro Where 2"
 </p> 
 
 * SELECT bairro, endereco FROM endereco WHERE cidade = 'Vitoria';
 <p align="center">
-  <img width="520" height="195" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE3.PNG "Filtro Where 3"
+  <img width="520" height="195" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE3.PNG?raw=true "Filtro Where 3"
 </p> 
 
 * SELECT avaliacoes_recebidas, comentarios_recebidos FROM avaliacoes WHERE avaliacoes_recebidas >= 3;
 <p align="center">
-  <img width="725" height="365" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE4.PNG "Filtro Where 4"
+  <img width="725" height="365" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE4.PNG?raw=true "Filtro Where 4"
 </p> 
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos 
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
-a)  
+#### Operadores Lógicos  
 * SELECT nome, descricao FROM servico WHERE preco IS NOT NULL; 
+<p align="center">
+  <img width="564" height="223" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20L%C3%93GICOS1.PNG?raw=true "OPERADORES LÓGICOS 1"
+</p>
 
 * SELECT nome_completo FROM usuario WHERE data_nascimento >= '1990/01/01' AND data_nascimento <= '1999/12/31';
+<p align="center">
+  <img width="176" height="223" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20L%C3%93GICOS2.PNG?raw=true "OPERADORES LÓGICOS 2"
+</p>
 
 * SELECT nome, descricao FROM servico WHERE preco < 100 AND data_publicacao >= '2019/01/01';
+<p align="center">
+  <img width="557" height="192" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20L%C3%93GICOS3.PNG?raw=true "OPERADORES LÓGICOS 3"
+</p>
 
 * SELECT bairro, endereco FROM endereco WHERE cidade = 'Serra' OR cidade = 'Vila Velha';
+<p align="center">
+  <img width="561" height="523" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20L%C3%93GICOS4.PNG?raw=true "OPERADORES LÓGICOS 4"
+</p>
 
 * SELECT bairro, endereco FROM endereco WHERE codigo_usuario IS NOT NULL; 
+<p align="center">
+  <img width="537" height="619" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20L%C3%93GICOS5.PNG?raw=true "OPERADORES LÓGICOS 5"
+</p>
 
-b)
+#### Operadores Aritméticos
 * SELECT nome, descricao, preco * 0.1 AS Desconto FROM servico;
+<p align="center">
+  <img width="944" height="323" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20ARITM%C3%89TICOS1.PNG?raw=true "OPERADORES ARITMÉTICOS 1"
 
 * SELECT nome, descricao, preco * 0.9 AS "Preço com desconto" FROM servico WHERE preco * 0.9 < 90;
+<p align="center">
+  <img width="851" height="180" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20ARITM%C3%89TICOS2.PNG?raw=true "OPERADORES ARITMÉTICOS 2"
 
 * SELECT nome, descricao, preco * 1.05 AS "Preço com inflação de 5%" FROM servico;
+<p align="center">
+  <img width="906" height="415" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20ARITM%C3%89TICOS3.PNG?raw=true "OPERADORES ARITMÉTICOS 3"
 
-c)
+#### Campos Renomeados
 * SELECT nome_completo AS Nome, nome_usuario AS Login FROM usuario;
+<p align="center">
+  <img width="734" height="618" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CAMPOS%20RENOMEADOS1.PNG?raw=true "CAMPOS RENOMEADOS 1"
 
-* SELECT COUNT(*) AS Qtd_usuarios FROM usuario;
+* SELECT COUNT( * ) AS Qtd_usuarios FROM usuario;
+<p align="center">
+  <img width="111" height="74" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CAMPOS%20RENOMEADOS2.PNG?raw=true "CAMPOS RENOMEADOS 2"
 
 * SELECT nome_completo AS Nome, AGE(CURRENT_DATE,data_nascimento) AS Idade FROM usuario;
+<p align="center">
+  <img width="665" height="621" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CAMPOS%20RENOMEADOS3.PNG?raw=true "CAMPOS RENOMEADOS 3"
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
  
-a) 
+#### Operadores Like e Datas
 * SELECT nome_completo FROM usuario WHERE nome_completo ILIKE 'm%';
 <p align="center">
- <img width="168" height="179"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS1.PNG "OPERADORES LIKE E DATAS 1">
+ <img width="168" height="179"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS1.PNG?raw=true "OPERADORES LIKE E DATAS 1">
 </p> 
 
 * SELECT nome_completo FROM usuario WHERE nome_completo LIKE '%a';
 <p align="center">
- <img width="181" height="405"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS2.PNG "OPERADORES LIKE E DATAS 2">
+ <img width="181" height="405"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS2.PNG?raw=true "OPERADORES LIKE E DATAS 2">
 </p> 
 
 * SELECT nome_completo, email FROM usuario WHERE email LIKE '%yahoo%';
 <p align="center">
- <img width="632" height="112"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS3.PNG "OPERADORES LIKE E DATAS 3">
+ <img width="632" height="112"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS3.PNG?raw=true "OPERADORES LIKE E DATAS 3">
 </p> 
 
 * SELECT telefone FROM contato WHERE telefone LIKE '(27)%';
 <p align="center">
- <img width="149" height="510"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS4.PNG "OPERADORES LIKE E DATAS 4">
+ <img width="149" height="510"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS4.PNG?raw=true "OPERADORES LIKE E DATAS 4">
 </p> 
 
 * SELECT nome_usuario FROM usuario WHERE nome_usuario LIKE '_______';
 <p align="center">
- <img width="127" height="334"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS5.PNG "OPERADORES LIKE E DATAS 5">
+ <img width="127" height="334"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS5.PNG?raw=true "OPERADORES LIKE E DATAS 5">
 </p> 
 
 * SELECT telefone FROM contato WHERE telefone LIKE '(28)%';
 <p align="center">
- <img width="137" height="287"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS6.PNG "OPERADORES LIKE E DATAS 6">
+ <img width="137" height="287"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS6.PNG?raw=true "OPERADORES LIKE E DATAS 6">
 </p> 
 
 * SELECT nome_completo, email FROM usuario WHERE email LIKE '%hotmail%';
 <p align="center">
- <img width="643" height="365"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS7.PNG "OPERADORES LIKE E DATAS 7">
+ <img width="643" height="365"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS7.PNG?raw=true "OPERADORES LIKE E DATAS 7">
 </p> 
 
-b)
+#### Operadores Like e Datas
 * SELECT nome_completo, CURRENT_DATE-(data_cadastro) AS "Dias no sistema" FROM USUARIO;
 <p align="center">
- <img width="678" height="622"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS8.PNG "OPERADORES LIKE E DATAS 8">
+ <img width="678" height="622"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS8.PNG?raw=true "OPERADORES LIKE E DATAS 8">
 </p> 
 
 * SELECT nome, descricao FROM servico WHERE CURRENT_DATE-data_publicacao < 180;
 <p align="center">
- <img width="840" height="330"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS9.PNG "OPERADORES LIKE E DATAS 9">
+ <img width="840" height="330"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS9.PNG?raw=true "OPERADORES LIKE E DATAS 9">
 </p> 
 
 * SELECT COUNT( * ) AS "Quantidade de servicos nos ultimos 6 meses" FROM servico WHERE CURRENT_DATE-data_publicacao < 180;
 <p align="center">
- <img width="317" height="78"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS10.PNG "OPERADORES LIKE E DATAS 10">
+ <img width="317" height="78"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS10.PNG?raw=true "OPERADORES LIKE E DATAS 10">
 </p> 
 
 * SELECT codigo_servico, COUNT( * ) AS Qtd_Agendamentos_ultimos_3meses FROM agendamento WHERE CURRENT_DATE-data < 91 GROUP BY codigo_servico;
 <p align="center">
- <img width="552" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS11.PNG "OPERADORES LIKE E DATAS 11">
+ <img width="552" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS11.PNG?raw=true "OPERADORES LIKE E DATAS 11">
 </p> 
 
 * SELECT nome, CURRENT_DATE-data_publicacao AS Tempo_no_sistema FROM servico;
 <p align="center">
- <img width="712" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS12.PNG "OPERADORES LIKE E DATAS 12">
+ <img width="712" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS12.PNG?raw=true "OPERADORES LIKE E DATAS 12">
 </p> 
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
 * UPDATE servico SET modo_pagamento = 002 WHERE codigo = 009;
 <p align="center">
- <img width="706" height="124"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO1.PNG "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 1">
+ <img width="706" height="124"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO1.PNG?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 1">
 </p> 
 
 * UPDATE agendamento SET data = '2019/11/06'  WHERE codigo = 20;
 <p align="center">
- <img width="992" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO2.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 2">
+ <img width="992" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO2.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 2">
 </p>
 
 * DELETE FROM agendamento WHERE codigo_prestador = 17;
 <p align="center">
- <img width="1021" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO3.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 3">
+ <img width="1021" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO3.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 3">
 </p>
 
 * INSERT INTO agendamento VALUES (020,    002, 016, 017, 016, '2019/11/05', 009);
 
 * DELETE FROM agendamento WHERE codigo = 19;
 <p align="center">
- <img width="1021" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO4.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 4">
+ <img width="1021" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO4.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 4">
 </p>
 
 * INSERT INTO agendamento VALUES (019, 009, 015, 005, 015, '2019/11/07',001);
 
 * UPDATE servico SET modo_pagamento = 001 WHERE codigo = 009;
 <p align="center">
- <img width="989" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO5.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 5">
+ <img width="989" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO5.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 5">
 </p>
 
 * UPDATE contato SET telefone = '(27) 3354-1204' WHERE codigo = 012;
@@ -392,32 +419,32 @@ b)
         
 * SELECT nome AS "Nome Servico", usuario.nome_completo AS "Nome Cliente", prestador.nome_completo AS "Nome Prestador", hora,data FROM servico INNER JOIN usuario_servico ON (usuario_servico.codigo_usuario = servico.codigo) INNER JOIN usuario ON (usuario_servico.codigo_usuario = usuario.codigo) INNER JOIN agendamento ON (agendamento.codigo = usuario.codigo) INNER JOIN usuario AS prestador ON (prestador.codigo = agendamento.codigo_prestador);
 <p align="center">
- <img width="926" height="259"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O1.PNG "JUNÇÃO E ORDENAÇÃO 1">
+ <img width="926" height="259"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O1.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 1">
 </p>
 
 * SELECT DISTINCT cidade, servico.nome FROM usuario INNER JOIN endereco ON (usuario.codigo = endereco.codigo_usuario) INNER JOIN usuario_servico AS us ON (usuario.codigo = us.codigo_usuario) INNER JOIN servico ON (us.codigo_servico = servico.codigo);
 <p align="center">
- <img width="629" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O2.PNG "JUNÇÃO E ORDENAÇÃO 2">
+ <img width="629" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O2.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 2">
 </p>
 
 * SELECT usuario.nome_completo AS "Prestador", servico.nome AS "Nome do servico", COUNT( * ) AS "Quantidade de agendamentos feitos" FROM usuario INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_prestador) INNER JOIN servico ON (agendamento.codigo_servico = servico.codigo) GROUP BY usuario.nome_completo, servico.nome ORDER BY COUNT( * ) DESC; 
 <p align="center">
- <img width="815" height="447"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O3.PNG "JUNÇÃO E ORDENAÇÃO 3">
+ <img width="815" height="447"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O3.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 3">
 </p>
 
 * SELECT nome, descricao, avaliacoes_recebidas, comentarios_recebidos FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.cod_servico);
 <p align="center">
- <img width="908" height="489"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O4.PNG "JUNÇÃO E ORDENAÇÃO 4">
+ <img width="908" height="489"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O4.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 4">
 </p>
 
 * SELECT servico.nome, telefone, min(avaliacoes_recebidas) AS "Menor avaliacao", max(avaliacoes_recebidas) AS "Maior avaliacao" FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.cod_servico) INNER JOIN usuario_servico ON (servico.codigo = usuario_servico.codigo_servico) INNER JOIN usuario ON (usuario.codigo = usuario_servico.codigo_usuario) INNER JOIN contato ON (usuario.codigo = contato.codigo) GROUP BY servico.nome, telefone;
 <p align="center">
- <img width="876" height="366"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O5.PNG "JUNÇÃO E ORDENAÇÃO 5">
+ <img width="876" height="366"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O5.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 5">
 </p>
 
 * SELECT cidade, COUNT(cidade) AS "Qtd de servicos na cidade" FROM usuario INNER JOIN endereco ON (usuario.codigo = endereco.codigo_usuario) INNER JOIN usuario_servico ON (usuario.codigo = usuario_servico.codigo_usuario) INNER JOIN servico ON (servico.codigo = usuario_servico.codigo_servico) GROUP BY cidade ORDER BY COUNT(cidade);
 <p align="center">
- <img width="657" height="260"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O6.PNG "JUNÇÃO E ORDENAÇÃO 6">
+ <img width="657" height="260"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O6.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 6">
 </p>
 
 >## Marco de Entrega 02 em:<br>
