@@ -259,6 +259,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
     b) Criar no mínimo 3 consultas com operadores aritméticos 
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
+    
 #### Operadores Lógicos  
 * SELECT nome, descricao FROM servico WHERE preco IS NOT NULL; 
 <p align="center">
@@ -286,6 +287,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 </p>
 
 #### Operadores Aritméticos
+
 * SELECT nome, descricao, preco * 0.1 AS Desconto FROM servico;
 <p align="center">
   <img width="944" height="323" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20ARITM%C3%89TICOS1.PNG?raw=true "OPERADORES ARITMÉTICOS 1"
@@ -297,8 +299,10 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 * SELECT nome, descricao, preco * 1.05 AS "Preço com inflação de 5%" FROM servico;
 <p align="center">
   <img width="906" height="415" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20ARITM%C3%89TICOS3.PNG?raw=true "OPERADORES ARITMÉTICOS 3"
+       
 
 #### Campos Renomeados
+
 * SELECT nome_completo AS Nome, nome_usuario AS Login FROM usuario;
 <p align="center">
   <img width="734" height="618" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CAMPOS%20RENOMEADOS1.PNG?raw=true "CAMPOS RENOMEADOS 1"
@@ -311,11 +315,14 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 <p align="center">
   <img width="665" height="621" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CAMPOS%20RENOMEADOS3.PNG?raw=true "CAMPOS RENOMEADOS 3"
 
+
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
     b) Criar uma consulta para cada tipo de função data apresentada.
  
+ 
 #### Operadores Like e Datas
+
 * SELECT nome_completo FROM usuario WHERE nome_completo ILIKE 'm%';
 <p align="center">
  <img width="168" height="179"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS1.PNG?raw=true "OPERADORES LIKE E DATAS 1">
