@@ -169,7 +169,6 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ![Arquivo txt do Insert aplicado nas tabelas de banco de dados](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/insert%20dos%20dados?raw=true "Insert nas Tabelas")
         
 
-
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
@@ -261,6 +260,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
     
 #### Operadores Lógicos  
+
 * SELECT nome, descricao FROM servico WHERE preco IS NOT NULL; 
 <p align="center">
   <img width="564" height="223" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20L%C3%93GICOS1.PNG?raw=true "OPERADORES LÓGICOS 1"
@@ -291,30 +291,34 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 * SELECT nome, descricao, preco * 0.1 AS Desconto FROM servico;
 <p align="center">
   <img width="944" height="323" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20ARITM%C3%89TICOS1.PNG?raw=true "OPERADORES ARITMÉTICOS 1"
-
+</p>
+ 
 * SELECT nome, descricao, preco * 0.9 AS "Preço com desconto" FROM servico WHERE preco * 0.9 < 90;
 <p align="center">
   <img width="851" height="180" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20ARITM%C3%89TICOS2.PNG?raw=true "OPERADORES ARITMÉTICOS 2"
-
+</p>
+ 
 * SELECT nome, descricao, preco * 1.05 AS "Preço com inflação de 5%" FROM servico;
 <p align="center">
   <img width="906" height="415" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20ARITM%C3%89TICOS3.PNG?raw=true "OPERADORES ARITMÉTICOS 3"
-       
+</p>      
 
 #### Campos Renomeados
 
 * SELECT nome_completo AS Nome, nome_usuario AS Login FROM usuario;
 <p align="center">
   <img width="734" height="618" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CAMPOS%20RENOMEADOS1.PNG?raw=true "CAMPOS RENOMEADOS 1"
+</p>
 
 * SELECT COUNT( * ) AS Qtd_usuarios FROM usuario;
 <p align="center">
   <img width="111" height="74" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CAMPOS%20RENOMEADOS2.PNG?raw=true "CAMPOS RENOMEADOS 2"
+</p>
 
 * SELECT nome_completo AS Nome, AGE(CURRENT_DATE,data_nascimento) AS Idade FROM usuario;
 <p align="center">
   <img width="665" height="621" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CAMPOS%20RENOMEADOS3.PNG?raw=true "CAMPOS RENOMEADOS 3"
-
+</p>
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
     a) Criar outras 5 consultas que envolvam like ou ilike
