@@ -290,29 +290,65 @@ c)
  
 a) 
 * SELECT nome_completo FROM usuario WHERE nome_completo ILIKE 'm%';
+<p align="center">
+ <img width="168" height="179"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS1.PNG "OPERADORES LIKE E DATAS 1">
+</p> 
 
 * SELECT nome_completo FROM usuario WHERE nome_completo LIKE '%a';
+<p align="center">
+ <img width="181" height="405"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS2.PNG "OPERADORES LIKE E DATAS 2">
+</p> 
 
 * SELECT nome_completo, email FROM usuario WHERE email LIKE '%yahoo%';
+<p align="center">
+ <img width="632" height="112"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS3.PNG "OPERADORES LIKE E DATAS 3">
+</p> 
 
 * SELECT telefone FROM contato WHERE telefone LIKE '(27)%';
+<p align="center">
+ <img width="149" height="510"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS4.PNG "OPERADORES LIKE E DATAS 4">
+</p> 
 
-* SELECT nome_usuario FROM usuario WHERE usuario LIKE '_______';
+* SELECT nome_usuario FROM usuario WHERE nome_usuario LIKE '_______';
+<p align="center">
+ <img width="127" height="334"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS5.PNG "OPERADORES LIKE E DATAS 5">
+</p> 
 
 * SELECT telefone FROM contato WHERE telefone LIKE '(28)%';
+<p align="center">
+ <img width="137" height="287"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS6.PNG "OPERADORES LIKE E DATAS 6">
+</p> 
 
 * SELECT nome_completo, email FROM usuario WHERE email LIKE '%hotmail%';
+<p align="center">
+ <img width="643" height="365"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS7.PNG "OPERADORES LIKE E DATAS 7">
+</p> 
 
 b)
-* SELECT nome_completo, CURRENT_DATE-(data_cadastro) AS "Dias no sistema" FROM USUARIO; - TESTAR DE NOVO
+* SELECT nome_completo, CURRENT_DATE-(data_cadastro) AS "Dias no sistema" FROM USUARIO;
+<p align="center">
+ <img width="678" height="622"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS8.PNG "OPERADORES LIKE E DATAS 8">
+</p> 
 
 * SELECT nome, descricao FROM servico WHERE CURRENT_DATE-data_publicacao < 180;
+<p align="center">
+ <img width="840" height="330"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS9.PNG "OPERADORES LIKE E DATAS 9">
+</p> 
 
-* SELECT COUNT(*) AS "Quantidade de servicos nos ultimos 6 meses" FROM servico WHERE CURRENT_DATE-data_publicacao < 180;
+* SELECT COUNT( * ) AS "Quantidade de servicos nos ultimos 6 meses" FROM servico WHERE CURRENT_DATE-data_publicacao < 180;
+<p align="center">
+ <img width="317" height="78"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS10.PNG "OPERADORES LIKE E DATAS 10">
+</p> 
 
-* SELECT codigo_servico, COUNT(*) AS Qtd_Agendamentos_ultimos_3meses FROM agendamento WHERE CURRENT_DATE-data < 91 GROUP BY codigo_servico;
+* SELECT codigo_servico, COUNT( * ) AS Qtd_Agendamentos_ultimos_3meses FROM agendamento WHERE CURRENT_DATE-data < 91 GROUP BY codigo_servico;
+<p align="center">
+ <img width="552" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS11.PNG "OPERADORES LIKE E DATAS 11">
+</p> 
 
 * SELECT nome, CURRENT_DATE-data_publicacao AS Tempo_no_sistema FROM servico;
+<p align="center">
+ <img width="712" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20LIKE%20E%20DATAS12.PNG "OPERADORES LIKE E DATAS 12">
+</p> 
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
