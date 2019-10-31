@@ -77,7 +77,7 @@ ALTER TABLE Servico ADD CONSTRAINT FK_Servico_2
     ON DELETE CASCADE;
  
 ALTER TABLE Servico ADD CONSTRAINT FK_Servico_3
-    FOREIGN KEY (cogido_modo_pagamento)
+    FOREIGN KEY (codigo_modo_pagamento)
     REFERENCES Modo_pagamento (codigo)
     ON DELETE CASCADE;
  
