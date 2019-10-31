@@ -174,7 +174,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
  <img width="603" height="779"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_contato.png?raw=true "Dados Tabela Contato">
 </p> 
      
-   * SELECT * FROM ENDERECO;
+   * SELECT * FROM ENDERECO; //trocar o print
    <p align="center">
  <img width="633" height="404"          src=https://raw.githubusercontent.com/GrupoAndreBiancaMayke/trabalho_bd1/master/images/todos_os_dados_tabela_endereco.PNG?raw=true "Dados Tabela Endereco">
 </p> 
@@ -194,12 +194,12 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
  <img width="1045" height="608"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_agendamento.png?raw=true "Dados Tabela Agendamento">
 </p> 
      
-   * SELECT * FROM BAIRRO; //editar o print
+   * SELECT * FROM BAIRRO; //trocar o print
    <p align="center">
  <img width="552" height="264"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_dias_disponiveis.PNG?raw=true "Dados Tabela Dias disponiveis">
 </p> 
      
-   * SELECT * FROM CIDADE; //editar o print
+   * SELECT * FROM CIDADE; //trocar o print
    <p align="center">
  <img width="726" height="667"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_servico_dias.png?raw=true "Dados Tabela Servico dias">
 </p> 
