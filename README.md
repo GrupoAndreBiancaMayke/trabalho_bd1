@@ -207,30 +207,16 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
  <img width="1045" height="608"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_agendamento.png?raw=true "Dados Tabela Agendamento">
 </p> 
      
-   * SELECT * FROM DIAS_DISPONIVEIS;
+   * SELECT * FROM BAIRRO; //editar o print
    <p align="center">
  <img width="552" height="264"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_dias_disponiveis.PNG?raw=true "Dados Tabela Dias disponiveis">
 </p> 
      
-   * SELECT * FROM SERVICO_DIAS;
+   * SELECT * FROM CIDADE; //editar o print
    <p align="center">
  <img width="726" height="667"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_servico_dias.png?raw=true "Dados Tabela Servico dias">
 </p> 
      
-   * SELECT * FROM USUARIO_SERVICO;
-   <p align="center">
- <img width="693" height="354"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_usuario_servico.png?raw=true "Dados Tabela Usuario Servico">
-</p> 
-     
-   * SELECT * FROM HORAS_DISPONIVEIS;
-   <p align="center">
- <img width="835" height="453"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_horas_disponiveis.png?raw=true "Dados Tabela Horas disponiveis">
-</p> 
-     
-   * SELECT * FROM SERVICO_HORAS;
-   <p align="center">
- <img width="745" height="676"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_servico_horas.png?raw=true "Dados Tabela Servico horas">
-</p> 
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
