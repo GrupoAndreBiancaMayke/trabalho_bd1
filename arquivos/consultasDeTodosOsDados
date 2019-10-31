@@ -5,8 +5,6 @@ SELECT * FROM endereco;
 SELECT * FROM modo_pagamento;
 SELECT * FROM avaliacoes; 
 SELECT * FROM agendamento;
-SELECT * FROM dias_disponiveis;
-SELECT * FROM servico_dias;
-SELECT * FROM usuario_servico;
-SELECT * FROM horas_disponiveis;
-SELECT * FROM servico_horas;
+SELECT * FROM cidade;
+SELECT * FROM bairro;
+
