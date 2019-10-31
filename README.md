@@ -217,7 +217,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
   <img width="571" height="178" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE2.PNG?raw=true "Filtro Where 2"
 </p> 
 
-* SELECT bairro, endereco FROM endereco WHERE cidade = 'Vitoria';
+* SELECT bairro, endereco FROM endereco WHERE cidade = 'Vitoria'; /*mexer nessa*/
 <p align="center">
   <img width="520" height="195" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/SELECT%20WHERE3.PNG?raw=true "Filtro Where 3"
 </p> 
@@ -249,12 +249,12 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
   <img width="557" height="192" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20L%C3%93GICOS3.PNG?raw=true "OPERADORES LÓGICOS 3"
 </p>
 
-* SELECT bairro, endereco FROM endereco WHERE cidade = 'Serra' OR cidade = 'Vila Velha';
+* SELECT bairro, endereco FROM endereco WHERE cidade = 'Serra' OR cidade = 'Vila Velha'; /*mexer nessa*/
 <p align="center">
   <img width="561" height="523" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20L%C3%93GICOS4.PNG?raw=true "OPERADORES LÓGICOS 4"
 </p>
 
-* SELECT bairro, endereco FROM endereco WHERE codigo_usuario IS NOT NULL; 
+* SELECT bairro, endereco FROM endereco WHERE codigo_usuario IS NOT NULL; /*mexer nessa*/
 <p align="center">
   <img width="537" height="619" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/OPERADORES%20L%C3%93GICOS5.PNG?raw=true "OPERADORES LÓGICOS 5"
 </p>
@@ -397,7 +397,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
  <img width="459" height="564"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO6.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 6">
 </p>
 
-#### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
+#### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br> /*mexer nessas*/
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
         
