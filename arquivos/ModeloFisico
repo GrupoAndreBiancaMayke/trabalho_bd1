@@ -17,8 +17,8 @@ CREATE TABLE Servico (
     nome varchar(60),
     descricao varchar(500),
     preco decimal(10,2),
-    codigo_modo_pagamento int
-    data_publicacao date,
+    codigo_modo_pagamento int,
+    data_publicacao date
 );
 
 CREATE TABLE Contato (
@@ -38,7 +38,7 @@ CREATE TABLE Endereco (
 
 CREATE TABLE Agendamento (
     codigo int PRIMARY KEY,
-    codigo_servico int
+    codigo_servico int,
     codigo_cliente int,
     codigo_endereco int, 
     data date,
