@@ -1,24 +1,24 @@
 CREATE TABLE Usuario (
     codigo int PRIMARY KEY,
-    cpf varchar(14),
-    email varchar(50),
     nome_usuario varchar(30),
+    email varchar(50),
+    sexo char,
     senha varchar(30),
     nome_completo varchar(60),
     data_nascimento date,
-    sexo char,
+    cpf varchar(14),
     data_cadastro date,
     codigo_endereco int
 );
 
 CREATE TABLE Servico (
     codigo int PRIMARY KEY,
+    codigo_usuario int,
     nome varchar(60),
     descricao varchar(500),
     preco decimal(10,2),
+    codigo_modo_pagamento int
     data_publicacao date,
-    codigo_usuario int,
-    cogido_modo_pagamento int
 );
 
 CREATE TABLE Contato (
@@ -30,17 +30,17 @@ CREATE TABLE Endereco (
     codigo int PRIMARY KEY,
     codigo_usuario int,
     cep varchar(9),
-    codigo_cidade int,
-    codigo_bairro int,
     endereco varchar(100),
-    numero int
+    numero int,
+    codigo_bairro int,
+    codigo_cidade int
 );
 
 CREATE TABLE Agendamento (
     codigo int PRIMARY KEY,
+    codigo_servico int
     codigo_cliente int,
-    codigo_endereco int,
-    codigo_servico int,
+    codigo_endereco int, 
     data date,
     hora varchar(5)
 );
