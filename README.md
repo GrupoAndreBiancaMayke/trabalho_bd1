@@ -49,7 +49,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 * Notação Entidade Relacionamento
         
 <p align="center">
-  <img width="1253" height="729" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/modelo_conceitual.png?raw=true "Modelo Conceitual")
+  <img width="980" height="539" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Modelo_Conceitual.PNG?raw=true "Modelo Conceitual")
 </p>
       
 * Notação UML
@@ -129,7 +129,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ### 6	MODELO LÓGICO<br>
         
 <p align="center">
-  <img width="1119" height="850" src=https://raw.githubusercontent.com/GrupoAndreBiancaMayke/trabalho_bd1/master/images/modelo_logico.png "Modelo Lógico"
+  <img width="837" height="498" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Modelo_Logico.PNG "Modelo Lógico"
 </p> 
 
 ### 7	MODELO FÍSICO<br>
