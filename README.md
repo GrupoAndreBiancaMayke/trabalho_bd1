@@ -43,7 +43,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
  
 #### 4.2 TABELA DE DADOS DO SISTEMA:
 
-![Tabela de dados do Sistema de Contratação de Serviços](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/TabelasSistemaContratacaodeServicos.xlsx?raw=true "Tabela - Sistema de Contratação de Serviços")
+![Tabela de dados do Sistema de Contratação de Serviços](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/TabelasdedadosdoSistemadeContratacaodeServicos.xlsx?raw=true "Tabela - Sistema de Contratação de Serviços")
     
 ### 5.MODELO CONCEITUAL<br>
 * Notação Entidade Relacionamento
@@ -76,7 +76,8 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     data_cadastro: campo que armazena a data em que o usuário se cadastrou no Sistema.
 
     SERVICO: Tabela que armazena as informações relativas ao serviços anunciados no Sistema.
-    cod_servico: campo que armazena o 
+    cod_servico: campo que armazena o codigo do serviço.
+    cod_prestador: campo que armazena o código do prestador de determinado serviço.
     nome_servico: campo que armazena o nome do serviço anunciado no Sistema.
     descricao: campo que armazena a descrição de cada serviço anunciado no Sistema.
     preco: campo que armazena a preço de cada serviço anunciado no Sistema. 
@@ -84,17 +85,17 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     data_publicacao: campo que armazena a data em que o anuncio do serviço foi publicado.
 
     CONTATO: Tabela que armazena as informações relativas aos telefones dos usuários cadastrados no Sistema.
-    codigo: campo que armazena o codigo de cada usuário.
+    cod_usuario: campo que armazena o codigo de cada usuário.
     telefone: campo que armazena o numero de telefone de cada usuário.
 
     ENDERECO: Tabela que armazena as informações relativas aos endereços de cada usuário cadastrado no Sistema.
     cod_endereco: campo que armazena o codigo do endereço do usuário.
     cod_usuario: campo que armazena o número do código de cada usuário cadastrado.
     cep: campo que armazena o número do CEP de cada usuário.
-    bairro: campo que armazena o nome do bairro de cada usuário.
     endereco: campo que armazena o endereço de cada usuário.
     numero_casa: campo que armazena o numero da casa de cada usuário.
-    cidade: campo que armazena a cidade de cada usuário.
+    bairro: campo que armazena o codigo do nome do bairro de cada usuário.
+    cidade: campo que armazena o codigo do nome da cidade de cada usuário.
 
     MODO_PAGAMENTO: Tabela que armazena os tipos de pagamento possíveis.
     cod_modo: campo que armazena o codigo de cada tipo de pagamento.
@@ -109,31 +110,17 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     cod_agendamento: campo que armazena o codigo de agendamento.
     cod_servico: campo que armazena o codigo do serviço contratado.
     cod_cliente: campo que armazena o codigo do cliente que contratou o serviço.
-    cod_prestador: campo que armazena o codigo do prestador do serviço.
     cod_endereco: campo que armazena o codigo do endereço que será realizado o serviço.
     data_agendada: campo que armazena a data em que o serviço vai ser realizado.
     hora_agendada: campo que armazena o horario em que o serviço vai ser realizado.
 
-    DIAS_DISPONIVEIS: Tabela que armazena os dias da semana disponiveis.
-    codigo_dia: campo que armazena o codigo de cada dia da semana.
-    dia: campo que armazena os dias da semana.
+    CIDADE: Tabela que armazena o nome de cada cidade.
+    codigo: campo que armazena o numero do codigo de cada cidade.
+    nome: campo que armazena o nome da cidade.
 
-    SERVICO_DIAS: Tabela que armazena a ligação da tabela serviço com a tabela dos dias disponiveis da semana.
-    codigo_servico: campo que armazena o codigo de cada serviço.
-    codigo_dia: campo que armazena o código dos dias da semana disponiveis para cada serviço.
-
-    USUARIO_SERVICO: Tabela que armazena a ligação da tabela usuario com a tabela de serviço.
-    codigo_usuario: campo que armazena o codigo de cada usuário.
-    codigo_servico: campo que armazena o codigo de cada serviço.
-
-    HORAS_DISPONIVEIS: Tabela que armazena as horas disponiveis para um serviço.
-    codigo_hora: campo que armazena o codigo para cada hora
-    hora: campo que armazena as horas.
-
-    SERVICO_HORAS: Tabela que armazena a ligação da tabela servico com a tabela de horas_disponiveis
-    codigo_servico: campo que armazena o codigo de cada servico.
-    codigo_hora: campo que armazena o codigo de cada hora diponivel.
-
+    BAIRRO: Tabela que armazena o nome de cada bairro.
+    codigo: campo que armazena o numero do codigo de cada bairro.
+    nome: campo que armazena o nome do bairro.
 
 #### 5.3 Principais fluxos de informação e principais tabelas do sistema 
 
