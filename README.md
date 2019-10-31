@@ -135,7 +135,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ### 7	MODELO FÍSICO<br>
 
 <p align="center">
-  <img width="267" height="383" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Modelo_Fisico.png?raw=true "Modelo Fisico">
+  <img width="267" height="383" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Modelo_Fisico.PNG?raw=true "Modelo Fisico">
 </p> 
 
 ![Arquivo txt do Modelo Fisico feito para o Sistema de Contratação de Serviços](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ModeloFisico?raw=true "Modelo Fisico")
