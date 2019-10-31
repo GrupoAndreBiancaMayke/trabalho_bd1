@@ -159,7 +159,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
-   * SELECT * FROM USUARIO;
+   * SELECT * FROM USUARIO; //falta colocar o codigo do endereco no insert e no drive
    <p align="center">
  <img width="1045" height="704"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_usuario.png?raw=true "Dados Tabela  Usuario">
 </p> 
