@@ -153,7 +153,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
  <img width="1069" height="510"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/insert_tabelas.PNG?raw=true "Dados Tabela  Usuario">
 </p> 
 
-![Arquivo txt do Insert aplicado nas tabelas de banco de dados](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/insert_tabelas.PNG?raw=true "Insert nas Tabelas")
+![Arquivo txt do Insert aplicado nas tabelas de banco de dados](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/insert%20dos%20dados")
         
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
@@ -196,12 +196,12 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
      
    * SELECT * FROM BAIRRO; 
    <p align="center">
- <img width="469" height="621"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_bairro.PNG?raw=true "Dados Tabela Dias disponiveis">
+ <img width="422" height="626"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_Bairro.PNG?raw=true "Dados Tabela Dias disponiveis">
 </p> 
      
    * SELECT * FROM CIDADE;
    <p align="center">
- <img width="405" height="272"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_cidade.PNG?raw=true "Dados Tabela Servico dias">
+ <img width="405" height="265"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_Cidade.PNG?raw=true "Dados Tabela Servico dias">
 </p> 
      
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
