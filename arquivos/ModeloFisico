@@ -1,3 +1,5 @@
+/* aalogico: */
+
 CREATE TABLE Usuario (
     codigo int PRIMARY KEY,
     nome_usuario varchar(30),
@@ -13,7 +15,7 @@ CREATE TABLE Usuario (
 
 CREATE TABLE Servico (
     codigo int PRIMARY KEY,
-    codigo_usuario int,
+    codigo_prestador int,
     nome varchar(60),
     descricao varchar(500),
     preco decimal(10,2),
@@ -28,7 +30,6 @@ CREATE TABLE Contato (
 
 CREATE TABLE Endereco (
     codigo int PRIMARY KEY,
-    codigo_usuario int,
     cep varchar(9),
     endereco varchar(100),
     numero int,
@@ -40,7 +41,7 @@ CREATE TABLE Agendamento (
     codigo int PRIMARY KEY,
     codigo_servico int,
     codigo_cliente int,
-    codigo_endereco int, 
+    codigo_endereco int,
     data date,
     hora varchar(5)
 );
@@ -72,7 +73,7 @@ ALTER TABLE Usuario ADD CONSTRAINT FK_Usuario_2
     ON DELETE CASCADE;
  
 ALTER TABLE Servico ADD CONSTRAINT FK_Servico_2
-    FOREIGN KEY (codigo_usuario)
+    FOREIGN KEY (codigo_prestador)
     REFERENCES Usuario (codigo)
     ON DELETE CASCADE;
  
