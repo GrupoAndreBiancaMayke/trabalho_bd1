@@ -129,7 +129,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ### 6	MODELO LÓGICO<br>
         
 <p align="center">
-  <img width="837" height="498" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Modelo_Logico.PNG?raw=true "Modelo Lógico"
+  <img width="1136" height="647" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ModeloLogico.PNG?raw=true "Modelo Lógico"
 </p> 
 
 ### 7	MODELO FÍSICO<br>
