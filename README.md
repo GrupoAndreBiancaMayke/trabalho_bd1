@@ -159,7 +159,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
-   * SELECT * FROM USUARIO; //falta colocar o codigo do endereco no insert e no drive
+   * SELECT * FROM USUARIO; 
    <p align="center">
  <img width="1170" height="670"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_usuario.png?raw=true "Dados Tabela  Usuario">
 </p> 
@@ -204,7 +204,6 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
  <img width="405" height="272"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_cidade.PNG?raw=true "Dados Tabela Servico dias">
 </p> 
      
-
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
 * SELECT nome_completo FROM usuario WHERE sexo = 'F';
