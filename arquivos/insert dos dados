@@ -3,18 +3,18 @@ insert into cidade values
 (002,	'Vila Velha'),
 (003,	'Serra'),
 (004,	'Linhares'),
-(005,	'Vitória'),
+(005,	'Vitoria'),
 (006,	'Cariacica'),
 (007,	'Cachoeiro de Itapemirim');
 
 insert into bairro values
 (001,	'De Carli'),
-(002,	'Araçás'),
+(002,	'Aracas'),
 (003,	'Central Carapina'),
 (004,	'Centro da Serra'),
 (005,	'Colina'),
 (006,	'das Laranjeiras'),
-(007,	'Caratoíra'),
+(007,	'Caratoira'),
 (008,	'Campina Grande'),
 (009,	'Santa Paula I'),
 (010,	'Arariguaba'),
@@ -23,9 +23,9 @@ insert into bairro values
 (013,	'Joana Darc'),
 (014,	'Alterosas'),
 (015,	'Cidade da Barra'),
-(016,	'São Torquato'),
-(017,	' Rosário de Fátima'),
-(018,	'Consolação');
+(016,	'Sao Torquato'),
+(017,	' Rosario de Fatima'),
+(018,	'Consolacao');
 
 insert into endereco values
 (001, '29194-025',	'Rua Joao da Costa Rampinelli',	150, 001, 001),
