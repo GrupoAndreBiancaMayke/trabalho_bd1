@@ -402,37 +402,32 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
         
 * SELECT cliente.nome_completo AS nome_cliente, contato.telefone, endereco, endereco.numero, bairro.nome as bairro, cidade.nome as cidade, servico.nome as servico, modo as pagamento, MAX(avaliacao) AS Avaliacao_maxima FROM agendamento INNER JOIN servico ON (agendamento.codigo_servico = servico.codigo) INNER JOIN usuario AS cliente ON (agendamento.codigo_cliente = cliente.codigo) INNER JOIN endereco ON (agendamento.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (endereco.codigo_cidade = cidade.codigo) INNER JOIN bairro ON (endereco.codigo_bairro = bairro.codigo) INNER JOIN contato ON (cliente.codigo = contato.codigo_usuario) INNER JOIN modo_pagamento ON (servico.codigo_modo_pagamento = modo_pagamento.codigo) INNER JOIN avaliacoes ON (avaliacoes.codigo_servico = servico.codigo) GROUP BY cliente.nome_completo, contato.telefone, endereco, endereco.numero, bairro.nome, cidade.nome, servico.nome, modo;
 <p align="center">
- <img width="926" height="259"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O1.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 1">
+ <img width="996" height="468"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_Juncao_todas_as_Tabelas.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 1">
 </p>
 
 * SELECT nome AS "Nome Servico", usuario.nome_completo AS "Nome Cliente", prestador.nome_completo AS "Nome Prestador", hora,data FROM servico  INNER JOIN usuario ON (servico.codigo_prestador = usuario.codigo) INNER JOIN agendamento ON (agendamento.codigo_cliente = usuario.codigo) INNER JOIN usuario AS prestador ON (prestador.codigo = servico.codigo_prestador);
 <p align="center">
- <img width="926" height="259"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O1.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 1">
+ <img width="922" height="360"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao1.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 2">
 </p>
 
 * SELECT cidade.nome AS "Nome cidade", servico.nome FROM usuario INNER JOIN endereco ON (usuario.codigo_endereco = endereco.codigo) INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade);
 <p align="center">
- <img width="629" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O2.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 2">
+ <img width="628" height="404"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao2.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 3">
 </p>
 
 * SELECT usuario.nome_completo AS "Prestador", servico.nome AS "Nome do servico", COUNT( * ) AS "Quantidade de agendamentos feitos" FROM usuario INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_prestador) INNER JOIN servico ON (agendamento.codigo_servico = servico.codigo) GROUP BY usuario.nome_completo, servico.nome ORDER BY COUNT( * ) DESC; 
 <p align="center">
- <img width="815" height="447"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O3.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 3">
+ <img width="821" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao3.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 4">
 </p>
 
 * SELECT usuario.nome_completo AS "Prestador", servico.nome AS "Nome do servico", COUNT( * ) AS "Quantidade de agendamentos feitos" FROM usuario INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (agendamento.codigo_servico = servico.codigo) GROUP BY usuario.nome_completo, servico.nome ORDER BY COUNT( * ) DESC;
 <p align="center">
- <img width="908" height="489"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O4.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 4">
+ <img width="914" height="481"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao4.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 5">
 </p>
 
 * SELECT nome, descricao, avaliacao, comentario FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico);
 <p align="center">
- <img width="876" height="366"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O5.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 5">
-</p>
-
-* SELECT servico.nome, telefone, min(avaliacao) AS "Menor avaliacao", max(avaliacao) AS "Maior avaliacao" FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico) INNER JOIN usuario ON (usuario.codigo = servico.codigo_prestador) INNER JOIN contato ON (usuario.codigo = contato.codigo_usuario) GROUP BY servico.nome, telefone;
-<p align="center">
- <img width="657" height="260"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O6.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 6">
+ <img width="851" height="364"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao5.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 6">
 </p>
 
 >## Marco de Entrega 02 em:<br>
