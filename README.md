@@ -415,17 +415,17 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
  <img width="628" height="404"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao2.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 3">
 </p>
 
-* SELECT usuario.nome_completo AS "Prestador", servico.nome AS "Nome do servico", COUNT( * ) AS "Quantidade de agendamentos feitos" FROM usuario INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_prestador) INNER JOIN servico ON (agendamento.codigo_servico = servico.codigo) GROUP BY usuario.nome_completo, servico.nome ORDER BY COUNT( * ) DESC; 
+* SELECT usuario.nome_completo AS "Prestador", servico.nome AS "Nome do servico", COUNT( * ) AS "Quantidade de agendamentos feitos" FROM usuario INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (agendamento.codigo_servico = servico.codigo) GROUP BY usuario.nome_completo, servico.nome ORDER BY COUNT( * ) DESC;
 <p align="center">
  <img width="821" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao3.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 4">
 </p>
 
-* SELECT usuario.nome_completo AS "Prestador", servico.nome AS "Nome do servico", COUNT( * ) AS "Quantidade de agendamentos feitos" FROM usuario INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (agendamento.codigo_servico = servico.codigo) GROUP BY usuario.nome_completo, servico.nome ORDER BY COUNT( * ) DESC;
+* SELECT nome, descricao, avaliacao, comentario FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico);
 <p align="center">
  <img width="914" height="481"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao4.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 5">
 </p>
 
-* SELECT nome, descricao, avaliacao, comentario FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico);
+* SELECT servico.nome, telefone, min(avaliacao) AS "Menor avaliacao", max(avaliacao) AS "Maior avaliacao" FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico) INNER JOIN usuario ON (usuario.codigo = servico.codigo_prestador) INNER JOIN contato ON (usuario.codigo = contato.codigo_usuario) GROUP BY servico.nome, telefone;
 <p align="center">
  <img width="851" height="364"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao5.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 6">
 </p>
