@@ -216,12 +216,12 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
   <img width="784" height="321" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Select%20Where2.PNG?raw=true "Filtro Where 2"
 </p> 
 
-* SELECT bairro, endereco FROM endereco WHERE cidade = 'Vitoria'; 
+* SELECT nome, descricao FROM servico WHERE preco <> 0; 
 <p align="center">
   <img width="528" height="191" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Select%20Where3.PNG?raw=true "Filtro Where 3"
 </p> 
 
-* SELECT avaliacoes_recebidas, comentarios_recebidos FROM avaliacoes WHERE avaliacoes_recebidas >= 3;
+* SELECT avaliacao, comentario FROM avaliacoes WHERE avaliacao >= 3;
 <p align="center">
   <img width="577" height="325" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Select%20Where4.PNG?raw=true "Filtro Where 4"
 </p> 
@@ -233,7 +233,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     
 #### Operadores Lógicos  
 
-* SELECT nome, descricao FROM servico WHERE preco IS NOT NULL; 
+* SELECT nome, descricao FROM servico WHERE preco < 100 AND preco > 50 ; 
 <p align="center">
   <img width="519" height="132" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Logicos1.PNG?raw=true "OPERADORES LÓGICOS 1"
 </p>
@@ -248,19 +248,19 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
   <img width="784" height="292" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Logicos3.PNG?raw=true "OPERADORES LÓGICOS 3"
 </p>
 
-* SELECT bairro, endereco FROM endereco WHERE cidade = 'Serra' OR cidade = 'Vila Velha'; /*mexer nessa*/
+* SELECT endereco FROM endereco WHERE codigo_cidade = 3 OR codigo_cidade = 2;
 <p align="center">
   <img width="209" height="475" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Logicos4.PNG?raw=true "OPERADORES LÓGICOS 4"
 </p>
 
-* SELECT bairro, endereco FROM endereco WHERE codigo_usuario IS NOT NULL; /*mexer nessa*/
+* SELECT comentario FROM avaliacoes WHERE comentario IS NOT NULL;
 <p align="center">
   <img width="413" height="355" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Logicos5.PNG?raw=true "OPERADORES LÓGICOS 5"
 </p>
 
 #### Operadores Aritméticos
 
-* SELECT nome, descricao, preco * 0.1 AS Desconto FROM servico;
+* SELECT nome, descricao, preco*0.1 AS Desconto FROM servico;
 <p align="center">
   <img width="922" height="355" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Aritmeticos1.PNG?raw=true "OPERADORES ARITMÉTICOS 1"
 </p>
@@ -335,7 +335,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 </p> 
 
 #### Operadores Like e Datas
-* SELECT nome_completo, CURRENT_DATE-(data_cadastro) AS "Dias no sistema" FROM USUARIO;
+* SELECT nome_completo, CURRENT_DATE-(data_cadastro) AS "Dias no sistema" FROM usuario;
 <p align="center">
  <img width="677" height="627"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data8.PNG?raw=true "OPERADORES LIKE E DATAS 8">
 </p> 
@@ -362,7 +362,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
-* UPDATE servico SET modo_pagamento = 002 WHERE codigo = 009;
+* UPDATE servico SET codigo_modo_pagamento = 002 WHERE codigo = 009;
 <p align="center">
  <img width="987" height="506"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao1.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 1">
 </p> 
@@ -372,26 +372,26 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
  <img width="987" height="506"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao2.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 2">
 </p>
 
-* DELETE FROM agendamento WHERE codigo_prestador = 17;
+* DELETE FROM agendamento WHERE codigo = 20;
 <p align="center">
  <img width="995" height="492"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao3.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 3">
 </p>
 
-* INSERT INTO agendamento VALUES (020,    002, 016, 017, 016, '2019/11/05', 009);
+* INSERT INTO agendamento VALUES (020,    002, 016, 016, '2019/11/05', '15h00');
 
 * DELETE FROM agendamento WHERE codigo = 19;
 <p align="center">
  <img width="995" height="492"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao4.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 4">
 </p>
 
-* INSERT INTO agendamento VALUES (019, 009, 015, 005, 015, '2019/11/07',001);
+* INSERT INTO agendamento VALUES (019, 009, 015, 015, '2019/11/07','9h00');
 
-* UPDATE servico SET modo_pagamento = 001 WHERE codigo = 009;
+* UPDATE servico SET codigo_modo_pagamento = 001 WHERE codigo = 009;
 <p align="center">
  <img width="989" height="506"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao5.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 5">
 </p>
 
-* UPDATE contato SET telefone = '(27) 3354-1204' WHERE codigo = 012;
+* UPDATE contato SET telefone = '(27) 3354-1204' WHERE codigo_usuario = 012;
 <p align="center">
  <img width="605" height="484"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao6.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 6">
 </p>
@@ -400,12 +400,17 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
         
-* SELECT nome AS "Nome Servico", usuario.nome_completo AS "Nome Cliente", prestador.nome_completo AS "Nome Prestador", hora,data FROM servico INNER JOIN usuario_servico ON (usuario_servico.codigo_usuario = servico.codigo) INNER JOIN usuario ON (usuario_servico.codigo_usuario = usuario.codigo) INNER JOIN agendamento ON (agendamento.codigo = usuario.codigo) INNER JOIN usuario AS prestador ON (prestador.codigo = agendamento.codigo_prestador);
+* SELECT cliente.nome_completo AS nome_cliente, contato.telefone, endereco, endereco.numero, bairro.nome as bairro, cidade.nome as cidade, servico.nome as servico, modo as pagamento, MAX(avaliacao) AS Avaliacao_maxima FROM agendamento INNER JOIN servico ON (agendamento.codigo_servico = servico.codigo) INNER JOIN usuario AS cliente ON (agendamento.codigo_cliente = cliente.codigo) INNER JOIN endereco ON (agendamento.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (endereco.codigo_cidade = cidade.codigo) INNER JOIN bairro ON (endereco.codigo_bairro = bairro.codigo) INNER JOIN contato ON (cliente.codigo = contato.codigo_usuario) INNER JOIN modo_pagamento ON (servico.codigo_modo_pagamento = modo_pagamento.codigo) INNER JOIN avaliacoes ON (avaliacoes.codigo_servico = servico.codigo) GROUP BY cliente.nome_completo, contato.telefone, endereco, endereco.numero, bairro.nome, cidade.nome, servico.nome, modo;
 <p align="center">
  <img width="926" height="259"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O1.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 1">
 </p>
 
-* SELECT DISTINCT cidade, servico.nome FROM usuario INNER JOIN endereco ON (usuario.codigo = endereco.codigo_usuario) INNER JOIN usuario_servico AS us ON (usuario.codigo = us.codigo_usuario) INNER JOIN servico ON (us.codigo_servico = servico.codigo);
+* SELECT nome AS "Nome Servico", usuario.nome_completo AS "Nome Cliente", prestador.nome_completo AS "Nome Prestador", hora,data FROM servico  INNER JOIN usuario ON (servico.codigo_prestador = usuario.codigo) INNER JOIN agendamento ON (agendamento.codigo_cliente = usuario.codigo) INNER JOIN usuario AS prestador ON (prestador.codigo = servico.codigo_prestador);
+<p align="center">
+ <img width="926" height="259"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O1.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 1">
+</p>
+
+* SELECT cidade.nome AS "Nome cidade", servico.nome FROM usuario INNER JOIN endereco ON (usuario.codigo_endereco = endereco.codigo) INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade);
 <p align="center">
  <img width="629" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O2.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 2">
 </p>
@@ -415,17 +420,17 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
  <img width="815" height="447"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O3.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 3">
 </p>
 
-* SELECT nome, descricao, avaliacoes_recebidas, comentarios_recebidos FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.cod_servico);
+* SELECT usuario.nome_completo AS "Prestador", servico.nome AS "Nome do servico", COUNT( * ) AS "Quantidade de agendamentos feitos" FROM usuario INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (agendamento.codigo_servico = servico.codigo) GROUP BY usuario.nome_completo, servico.nome ORDER BY COUNT( * ) DESC;
 <p align="center">
  <img width="908" height="489"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O4.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 4">
 </p>
 
-* SELECT servico.nome, telefone, min(avaliacoes_recebidas) AS "Menor avaliacao", max(avaliacoes_recebidas) AS "Maior avaliacao" FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.cod_servico) INNER JOIN usuario_servico ON (servico.codigo = usuario_servico.codigo_servico) INNER JOIN usuario ON (usuario.codigo = usuario_servico.codigo_usuario) INNER JOIN contato ON (usuario.codigo = contato.codigo) GROUP BY servico.nome, telefone;
+* SELECT nome, descricao, avaliacao, comentario FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico);
 <p align="center">
  <img width="876" height="366"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O5.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 5">
 </p>
 
-* SELECT cidade, COUNT(cidade) AS "Qtd de servicos na cidade" FROM usuario INNER JOIN endereco ON (usuario.codigo = endereco.codigo_usuario) INNER JOIN usuario_servico ON (usuario.codigo = usuario_servico.codigo_usuario) INNER JOIN servico ON (servico.codigo = usuario_servico.codigo_servico) GROUP BY cidade ORDER BY COUNT(cidade);
+* SELECT servico.nome, telefone, min(avaliacao) AS "Menor avaliacao", max(avaliacao) AS "Maior avaliacao" FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico) INNER JOIN usuario ON (usuario.codigo = servico.codigo_prestador) INNER JOIN contato ON (usuario.codigo = contato.codigo_usuario) GROUP BY servico.nome, telefone;
 <p align="center">
  <img width="657" height="260"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/CONSULTAS_COM_JUN%C3%87%C3%83O_E_ORDENA%C3%87%C3%83O6.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 6">
 </p>
