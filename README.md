@@ -316,7 +316,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 * SELECT telefone FROM contato WHERE telefone LIKE '(27)%';
 <p align="center">
- <img width="406" height="95"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data4.PNG?raw=true "OPERADORES LIKE E DATAS 4">
+ <img width="95" height="406"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data4.PNG?raw=true "OPERADORES LIKE E DATAS 4">
 </p> 
 
 * SELECT nome_usuario FROM usuario WHERE nome_usuario LIKE '_______';
@@ -364,39 +364,39 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 * UPDATE servico SET modo_pagamento = 002 WHERE codigo = 009;
 <p align="center">
- <img width="706" height="124"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO1.PNG?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 1">
+ <img width="987" height="506"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao1.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 1">
 </p> 
 
 * UPDATE agendamento SET data = '2019/11/06'  WHERE codigo = 20;
 <p align="center">
- <img width="992" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO2.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 2">
+ <img width="987" height="506"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao2.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 2">
 </p>
 
 * DELETE FROM agendamento WHERE codigo_prestador = 17;
 <p align="center">
- <img width="1021" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO3.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 3">
+ <img width="995" height="492"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao3.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 3">
 </p>
 
 * INSERT INTO agendamento VALUES (020,    002, 016, 017, 016, '2019/11/05', 009);
 
 * DELETE FROM agendamento WHERE codigo = 19;
 <p align="center">
- <img width="1021" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO4.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 4">
+ <img width="995" height="492"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao4.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 4">
 </p>
 
 * INSERT INTO agendamento VALUES (019, 009, 015, 005, 015, '2019/11/07',001);
 
 * UPDATE servico SET modo_pagamento = 001 WHERE codigo = 009;
 <p align="center">
- <img width="989" height="544"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO5.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 5">
+ <img width="989" height="506"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao5.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 5">
 </p>
 
 * UPDATE contato SET telefone = '(27) 3354-1204' WHERE codigo = 012;
 <p align="center">
- <img width="459" height="564"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ATUALIZACAO_E_EXCLUSAO6.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 6">
+ <img width="605" height="484"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao6.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 6">
 </p>
 
-#### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br> /*mexer nessas*/
+#### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br> 
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
         
