@@ -161,7 +161,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
    * SELECT * FROM USUARIO; //falta colocar o codigo do endereco no insert e no drive
    <p align="center">
- <img width="1045" height="704"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_usuario.png?raw=true "Dados Tabela  Usuario">
+ <img width="1170" height="670"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_usuario.png?raw=true "Dados Tabela  Usuario">
 </p> 
 
    * SELECT * FROM SERVICO;
