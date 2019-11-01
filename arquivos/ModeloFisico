@@ -1,5 +1,3 @@
-/* aalogico: */
-
 CREATE TABLE Usuario (
     codigo int PRIMARY KEY,
     nome_usuario varchar(30),
