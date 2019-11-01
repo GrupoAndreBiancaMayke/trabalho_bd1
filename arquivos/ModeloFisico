@@ -1,3 +1,5 @@
+/* aalogico: */
+
 CREATE TABLE Usuario (
     codigo int PRIMARY KEY,
     nome_usuario varchar(30),
@@ -94,10 +96,6 @@ ALTER TABLE Endereco ADD CONSTRAINT FK_Endereco_3
     FOREIGN KEY (codigo_cidade)
     REFERENCES Cidade (codigo)
     ON DELETE RESTRICT;
- 
-ALTER TABLE Endereco ADD CONSTRAINT FK_Endereco_4
-    FOREIGN KEY (codigo_usuario)
-    REFERENCES Usuario (codigo);
  
 ALTER TABLE Agendamento ADD CONSTRAINT FK_Agendamento_2
     FOREIGN KEY (codigo_cliente)
