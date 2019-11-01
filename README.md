@@ -135,7 +135,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ### 7	MODELO FÍSICO<br>
 
 <p align="center">
-  <img width="267" height="383" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Modelo_Fisico.PNG?raw=true "Modelo Fisico">
+  <img width="218" height="422" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Modelo_Fisico.png?raw=true "Modelo Fisico">
 </p> 
 
 ![Arquivo txt do Modelo Fisico feito para o Sistema de Contratação de Serviços](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ModeloFisico?raw=true "Modelo Fisico")
@@ -150,7 +150,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
         c) formato .SQL
         
  <p align="center">
- <img width="1052" height="572"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/insert%20tabelas.PNG?raw=true "Dados Tabela  Usuario">
+ <img width="1069" height="510"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/insert_tabelas.PNG?raw=true "Dados Tabela  Usuario">
 </p> 
 
 ![Arquivo txt do Insert aplicado nas tabelas de banco de dados](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/insert_tabelas.PNG?raw=true "Insert nas Tabelas")
