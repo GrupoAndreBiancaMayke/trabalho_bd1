@@ -176,7 +176,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
      
    * SELECT * FROM ENDERECO; 
    <p align="center">
- <img width="937" height="598"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_endereco.PNG?raw=true "Dados Tabela Endereco">
+ <img width="937" height="598"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_endereco.png?raw=true "Dados Tabela Endereco">
 </p> 
      
    * SELECT * FROM MODO_PAGAMENTO;
