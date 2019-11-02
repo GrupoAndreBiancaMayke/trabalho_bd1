@@ -434,34 +434,34 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
 
-* SELECT sexo, COUNT(  *  )  FROM usuario GROUP BY sexo; 
+* SELECT sexo, COUNT(  *  ) AS "Quantidade"  FROM usuario GROUP BY sexo; 
 <p align="center">
-  <img width="577" height="325" src= ?raw=true "Consulta Group by 1"
+  <img width="418" height="105" src= https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Group_by1.PNG?raw=true "Consulta Group by 1"
 </p> 
  
- * SELECT cidade.nome, COUNT( * ) FROM endereco INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) GROUP BY cidade.nome;
+ * SELECT cidade.nome, COUNT( * ) AS "Quantidade" FROM endereco INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) GROUP BY cidade.nome;
 <p align="center">
-  <img width="577" height="325" src=?raw=true "Consulta Group by 2"
+  <img width="710" height="289" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Group_by2.PNG?raw=true "Consulta Group by 2"
 </p> 
  
- * SELECT bairro.nome, COUNT( * ) FROM endereco INNER JOIN bairro ON (bairro.codigo = endereco.codigo_bairro) GROUP BY bairro.nome;
+ * SELECT bairro.nome, COUNT( * ) AS “Quantidade” FROM endereco INNER JOIN bairro ON (bairro.codigo = endereco.codigo_bairro) GROUP BY bairro.nome;
 <p align="center">
-  <img width="577" height="325" src=?raw=true "Consulta Group by 3"
+  <img width="629" height="620" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Group_by3.PNG?raw=true "Consulta Group by 3"
 </p> 
  
- * SELECT avaliacao, COUNT( * ) FROM avaliacoes GROUP BY avaliacao ORDER BY avaliacao DESC; 
+ * SELECT avaliacao, COUNT( * ) AS "Quantidade" FROM avaliacoes GROUP BY avaliacao ORDER BY avaliacao DESC; 
 <p align="center">
-  <img width="577" height="325" src=?raw=true "Consulta Group by 4"
+  <img width="518" height="163" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Group_by4.PNG?raw=true "Consulta Group by 4"
 </p> 
  
  * SELECT AVG(NULLIF(preco,0)) AS "Media de precos" FROM servico;
 <p align="center">
-  <img width="577" height="325" src=?raw=true "Consulta Group by 5"
+  <img width="119" height="58" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Group_by5.PNG?raw=true "Consulta Group by 5"
 </p> 
  
  * SELECT codigo_servico, COUNT ( * ) AS qtd_agendamentos FROM agendamento GROUP BY codigo_servico;
 <p align="center">
-  <img width="577" height="325" src=?raw=true "Consulta Group by 5"
+  <img width="562" height="355" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Group_by6.PNG?raw=true "Consulta Group by 6"
 </p> 
  
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
