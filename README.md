@@ -433,6 +433,37 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 >## Marco de Entrega 02 em:<br>
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
+
+* SELECT sexo, COUNT(  *  )  FROM usuario GROUP BY sexo; 
+<p align="center">
+  <img width="577" height="325" src= ?raw=true "Consulta Group by 1"
+</p> 
+ 
+ * SELECT cidade.nome, COUNT( * ) FROM endereco INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) GROUP BY cidade.nome;
+<p align="center">
+  <img width="577" height="325" src=?raw=true "Consulta Group by 2"
+</p> 
+ 
+ * SELECT bairro.nome, COUNT( * ) FROM endereco INNER JOIN bairro ON (bairro.codigo = endereco.codigo_bairro) GROUP BY bairro.nome;
+<p align="center">
+  <img width="577" height="325" src=?raw=true "Consulta Group by 3"
+</p> 
+ 
+ * SELECT avaliacao, COUNT( * ) FROM avaliacoes GROUP BY avaliacao ORDER BY avaliacao DESC; 
+<p align="center">
+  <img width="577" height="325" src=?raw=true "Consulta Group by 4"
+</p> 
+ 
+ * SELECT AVG(NULLIF(preco,0)) AS "Media de precos" FROM servico;
+<p align="center">
+  <img width="577" height="325" src=?raw=true "Consulta Group by 5"
+</p> 
+ 
+ * SELECT codigo_servico, COUNT ( * ) AS qtd_agendamentos FROM agendamento GROUP BY codigo_servico;
+<p align="center">
+  <img width="577" height="325" src=?raw=true "Consulta Group by 5"
+</p> 
+ 
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
