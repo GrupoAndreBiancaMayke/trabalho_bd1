@@ -260,7 +260,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 #### Operadores Aritméticos
 
-* SELECT nome, descricao, preco*0.1 AS Desconto FROM servico;
+* SELECT nome, descricao, preco * 0.1 AS Desconto FROM servico;
 <p align="center">
   <img width="922" height="355" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Aritmeticos1.PNG?raw=true "OPERADORES ARITMÉTICOS 1"
 </p>
@@ -465,12 +465,77 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 </p> 
  
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
+
+* SELECT usuario.nome_completo, endereco.cep FROM usuario LEFT OUTER JOIN endereco ON (usuario.codigo_endereco = endereco.codigo); 
+<p align="center">
+  <img width="731" height="626" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Left_e_Right_Join1.PNG?raw=true "Consulta Left e Right Join 1"
+</p>
+ 
+ * SELECT cep, endereco, numero, bairro.nome AS bairro, cidade.nome AS cidade from usuario RIGHT OUTER JOIN endereco ON (usuario.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (endereco.codigo_cidade = cidade.codigo) INNER JOIN bairro ON (endereco.codigo_bairro = bairro.codigo) WHERE nome_usuario IS NULL;  
+<p align="center">
+  <img width="917" height="86" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Left_e_Right_Join2.PNG?raw=true "Consulta Left e Right Join 2"
+</p>
+
+* SELECT nome AS nome_servico, descricao FROM servico LEFT OUTER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico) WHERE codigo_servico IS NULL; 
+<p align="center">
+  <img width="615" height="63" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Left_e_Right_Join3.PNG?raw=true "Consulta Left e Right Join 3"
+</p>
+ 
+ * SELECT usuario.nome_completo, servico.nome FROM usuario  RIGHT OUTER JOIN servico ON (usuario.codigo = servico.codigo_prestador); 
+<p align="center">
+  <img width="601" height="325" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Left_e_Right_Join4.PNG?raw=true "Consulta Left e Right Join 4"
+</p>
+
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 
+* CREATE VIEW nome_e_endereco_usuario AS SELECT usuario.nome_completo, endereco.endereco AS rua, endereco.numero AS numero_casa, bairro.nome AS nome_bairro, cidade.nome AS nome_cidade FROM usuario INNER JOIN endereco ON (usuario.codigo_endereco = endereco.codigo) INNER JOIN bairro ON (endereco.codigo_bairro = bairro.codigo) INNER JOIN cidade ON (endereco.codigo_cidade = cidade.codigo); 
+<p align="center">
+  <img width="939" height="616" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/View1.PNG?raw=true "Criar View 1"
+</p>
+
+* CREATE VIEW nome_e_contato AS SELECT nome_completo, telefone FROM usuario INNER JOIN contato ON (usuario.codigo = contato.codigo_usuario); 
+<p align="center">
+  <img width="689" height="619" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/View2.PNG?raw=true "Criar View 2"
+</p>
+
+* CREATE VIEW servicos_e_precos  AS SELECT nome, preco FROM servico;  
+<p align="center">
+  <img width="847" height="313" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/View3.PNG?raw=true "Criar View 3"
+</p>
+
+* CREATE VIEW servico_e_avaliacao  AS SELECT servico.nome, avaliacao FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico); 
+<p align="center">
+  <img width="802" height="325" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/View4.PNG?raw=true "Criar View 4"
+</p>
+
+* CREATE VIEW contato_eletronico_usuario AS SELECT nome_completo, email, nome_usuario FROM usuario; 
+<p align="center">
+  <img width="606" height="626" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/View5.PNG?raw=true "Criar View 5"
+</p>
+
+* CREATE VIEW dados_cadastrais AS SELECT nome_completo AS "Nome Completo", data_nascimento,cpf, nome_usuario, email FROM usuario; 
+<p align="center">
+  <img width="879" height="622" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/View6.PNG?raw=true "Criar View 6"
+</p>
+
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 
+* SELECT nome_completo, email FROM usuario WHERE codigo IN (SELECT codigo_prestador FROM servico); 
+<p align="center">
+  <img width="602" height="319" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Subconsulta1.PNG?raw=true "Subconsulta 1"
+</p>
+ 
+ * SELECT nome AS "Nome Servico" FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico) WHERE avaliacao IN (SELECT MAX(avaliacao) FROM avaliacoes); 
+<p align="center">
+  <img width="88" height="173" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Subconsulta2.PNG?raw=true "Subconsulta 2"
+</p>
+ 
+ * SELECT endereco, numero, cep FROM endereco WHERE codigo_cidade IN (SELECT codigo FROM cidade WHERE nome <> 'Vitoria'); 
+<p align="center">
+  <img width="843" height="559" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Subconsulta3.PNG?raw=true "Subconsulta 3"
+</p>
 
 #### 9.11 Relatórios e Gráficos 
     a)análises e resultados provenientes do banco de dados
