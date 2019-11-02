@@ -35,8 +35,8 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 #### 4.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     
 > Os "clientes" precisam inicialmente dos seguintes relatórios:
-* Relatório que informe quais prestadores de serviço oferecem serviços nas cidades dos clientes.
-* Relatatório de usuários prestadores de serviço incluindo as seguintes informações: nome do usuário, nome do serviço, descrição, catergoria, preço e contato.
+* Relatório que informe a quantidade de serviços realizados nas cidades dos clientes.
+* Relatório que informe o número de serviços agendados dos prestadores incluindo as seguintes informações: nome do serviço, descrição, categoria, preço e contato.
 * Relatório de serviços agendados para um determinado dia incluindo as seguintes informações: nome do cliente, descrição do serviço, data, hora e localização.
 * Relatório contendo as avaliações e comentários recebidos por um determinado serviço.
 * Relatório que informe as informações de contato de um cliente incluindo: nome do cliente, cidade, bairro, endereço e número. 
