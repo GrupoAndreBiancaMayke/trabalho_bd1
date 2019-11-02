@@ -39,7 +39,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 * Relatório que informe o número total de serviços agendados dos prestadores incluindo as seguintes informações: nome do serviço, descrição, categoria, preço e contato.
 * Relatório de serviços agendados para um determinado dia incluindo as seguintes informações: nome do cliente, descrição do serviço, data, hora e localização.
 * Relatório contendo as avaliações e comentários recebidos por um determinado serviço.
-* Relatório que informe as informações de contato de um cliente incluindo: nome do cliente, cidade, bairro, endereço e número. 
+* Relatório que informe as informações de contato de um usuário incluindo: nome do cliente, cidade, bairro, endereço e número.  
  
 #### 4.2 TABELA DE DADOS DO SISTEMA:
 
