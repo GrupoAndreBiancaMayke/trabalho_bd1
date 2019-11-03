@@ -124,7 +124,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 #### 5.3 Principais fluxos de informação e principais tabelas do sistema 
 
-> Os principais fluxos de dados de informação e, ainda, conterão mais dados no sistema ContrateiServiços são as tabelas USUARIO, SERVICO e AGENDAMENTO. As principais tabelas no sistema são USUARIO, SERVICO, AGENDAMENTO, ENDERECO e TELEFONE.
+> Os principais fluxos de dados de informação e, ainda, conterão mais dados no sistema ContrateiServiços são as tabelas USUARIO, SERVICO e AGENDAMENTO. As principais tabelas no sistema são USUARIO, SERVICO, AGENDAMENTO, ENDERECO e CONTATO.
 
 ### 6	MODELO LÓGICO<br>
         
