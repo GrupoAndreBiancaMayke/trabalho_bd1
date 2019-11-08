@@ -166,7 +166,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
    * SELECT * FROM SERVICO;
    <p align="center">
- <img width="961" height="429"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_servico.PNG?raw=true "Dados Tabela  Servico">
+ <img width="1154" height="361"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_servico.png?raw=true "Dados Tabela  Servico">
 </p> 
      
    * SELECT * FROM CONTATO;
