@@ -468,12 +468,12 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 * SELECT usuario.nome_completo, endereco.cep FROM usuario LEFT OUTER JOIN endereco ON (usuario.codigo_endereco = endereco.codigo); 
 <p align="center">
-  <img width="731" height="626" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Left_e_Right_Join1.PNG?raw=true "Consulta Left e Right Join 1"
+  <img width="744" height="595" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Left_e_Right_join1.PNG?raw=true "Consulta Left e Right Join 1"
 </p>
  
- * SELECT cep, endereco, numero, bairro.nome AS bairro, cidade.nome AS cidade from usuario RIGHT OUTER JOIN endereco ON (usuario.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (endereco.codigo_cidade = cidade.codigo) INNER JOIN bairro ON (endereco.codigo_bairro = bairro.codigo) WHERE nome_usuario IS NULL;  
+ * SELECT nome_completo FROM usuario LEFT OUTER JOIN servico ON (usuario.codigo = servico.codigo_prestador) WHERE codigo_prestador IS NULL;  
 <p align="center">
-  <img width="917" height="86" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Left_e_Right_Join2.PNG?raw=true "Consulta Left e Right Join 2"
+  <img width="179" height="405" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Left_e_Right_join2.PNG?raw=true "Consulta Left e Right Join 2"
 </p>
 
 * SELECT nome AS nome_servico, descricao FROM servico LEFT OUTER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico) WHERE codigo_servico IS NULL; 
