@@ -601,6 +601,76 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 #### 9.11 Relatórios e Gráficos 
     a)análises e resultados provenientes do banco de dados
+    
+**Relatório 1: Informar a quantidade de serviços realizados nas cidades dos clientes.**
+
+- SELECT count(cidade.nome) AS qtd_de_servico_na_cidade,cidade.nome AS nome_da_cidade FROM usuario INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_cliente) INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) group by cidade.nome;
+ <p align="center">
+ <img width="962" height="619"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico1.PNG?raw=true "Grafico 1">
+</p> 
+
+- SELECT count(cidade.nome) AS qtd_de_servico_na_cidade,cidade.nome AS nome_da_cidade FROM usuario INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_cliente) INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) group by cidade.nome; 
+                              
+* Quantidade de serviços por cidade;
+   <p align="center">
+ <img width="646" height="467"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico1.PNG?raw=true "Grafico 1">
+</p> 
+
+**Relatório 2: Informar o número total de serviços agendados dos prestadores incluindo as seguintes informações: nome do serviço, descrição, categoria, preço e contato.**
+
+- SELECT nome_completo AS nome_prestador, nome AS nome_servico, descricao, preco FROM usuario INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador);
+ <p align="center">
+ <img width="962" height="619"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico1.PNG?raw=true "Grafico 1">
+</p> 
+
+- SELECT servico.nome, COUNT( * ) AS qtd_agendamentos FROM agendamento INNER JOIN servico ON (servico.codigo = agendamento.codigo_servico) GROUP BY servico.nome; 
+                              
+* Quantidade de serviços por cidade;
+   <p align="center">
+ <img width="850" height="457"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico2.PNG?raw=true "Grafico 2">
+</p> 
+
+**Relatório 3: Informar serviços agendados para um determinado dia incluindo as seguintes informações: nome do cliente, descrição do serviço, data, hora e localização.**
+
+- SELECT nome_completo AS nome_cliente, servico.nome AS "servico_contratado", agendamento.data,agendamento.hora, cidade.nome AS nome_da_cidade FROM usuario INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_cliente) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade);
+ <p align="center">
+ <img width="741" height="461"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico1.PNG?raw=true "Grafico 1">
+</p> 
+
+- SELECT COUNT( * ) AS qtd_agendamento, nome_completo AS nome_cliente FROM usuario INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_cliente) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) GROUP BY nome_cliente; 
+                              
+* Quantidade de serviços por cidade;
+   <p align="center">
+ <img width="741" height="461"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico3.PNG?raw=true "Grafico 3">
+</p> 
+
+**Relatório 4: Informar avaliações e comentários recebidos para um determinado serviço.**
+
+- SELECT nome AS nome_do_servico, avaliacao, comentario FROM avaliacoes INNER JOIN servico ON (servico.codigo = avaliacoes.codigo_servico);
+ <p align="center">
+ <img width="580" height="469"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico1.PNG?raw=true "Grafico 1">
+</p> 
+
+- SELECT avaliacao, COUNT( * ) AS qtd_de_avaliacoes FROM avaliacoes GROUP BY avaliacao ORDER BY avaliacao DESC; 
+                              
+* Quantidade de serviços por cidade;
+   <p align="center">
+ <img width="580" height="459"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico4.PNG?raw=true "Grafico 4">
+</p> 
+
+**Relatório 5: Informar as informações de contato de um usuário incluindo: nome do cliente, cidade, bairro, endereço e número.**
+
+- SELECT nome_completo AS nome_cliente,endereco AS rua, bairro.nome AS nome_do_bairro, endereco.numero AS numero_casa,cidade.nome AS nome_da_cidade, email, telefone FROM usuario INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) INNER JOIN bairro ON (bairro.codigo = endereco.codigo_bairro) INNER JOIN contato ON (usuario.codigo = contato.codigo_usuario);
+ <p align="center">
+ <img width="962" height="619"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico1.PNG?raw=true "Grafico 1">
+</p> 
+
+- SELECT cidade.nome AS nome_da_cidade, COUNT( * ) AS qtd_de_moradores FROM usuario INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) INNER JOIN bairro ON (bairro.codigo = endereco.codigo_bairro) GROUP BY nome_da_cidade; 
+                              
+* Quantidade de serviços por cidade;
+   <p align="center">
+ <img width="768" height="450"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico5.PNG?raw=true "Grafico 5">
+</p> 
 
 >## Marco de Entrega 03 em:<br>
 
