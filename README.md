@@ -154,7 +154,8 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 </p> 
 
 ![Arquivo txt do Insert aplicado nas tabelas de banco de dados](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/insert%20dos%20dados)
-        
+
+![Arquivo .SQL do Insert aplicado nas tabelas de banco de dados](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ContrateiServicos.sql)        
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
     OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
@@ -206,21 +207,25 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
      
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 
+**Seleciona e exibe todos os nomes na tabela Usuário do sexo feminino:**
 * SELECT nome_completo FROM usuario WHERE sexo = 'F';
 <p align="center">
   <img width="158" height="359" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Select%20Where1.PNG?raw=true "Filtro Where 1"
 </p> 
 
+**Seleciona e exibe todos os nomes, descrições da tabela Serviço onde o preço dos serviços são menores que 100:**
 * SELECT nome, descricao FROM servico WHERE preco < 100;
 <p align="center">
   <img width="784" height="321" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Select%20Where2.PNG?raw=true "Filtro Where 2"
 </p> 
 
+**Seleciona e exibe o nome e a descrição do servico que o preço não tem valor igual a zero:**
 * SELECT nome, descricao FROM servico WHERE preco <> 0; 
 <p align="center">
   <img width="528" height="191" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Select%20Where3.PNG?raw=true "Filtro Where 3"
 </p> 
 
+**Seleciona e exibe todos as avaliações e comentários recebidos da tabela Avaliacoes onde a avaliação recebida é maior ou igual a 3:**
 * SELECT avaliacao, comentario FROM avaliacoes WHERE avaliacao >= 3;
 <p align="center">
   <img width="577" height="325" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Select%20Where4.PNG?raw=true "Filtro Where 4"
@@ -233,26 +238,31 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     
 #### Operadores Lógicos  
 
+**Consulta nas tabelas com Operadores Lógicos:**
 * SELECT nome, descricao FROM servico WHERE preco < 100 AND preco > 50 ; 
 <p align="center">
   <img width="519" height="132" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Logicos1.PNG?raw=true "OPERADORES LÓGICOS 1"
 </p>
 
+**Seleciona e exibe todos os nomes da tabela Usuário onde a data de nascimento de cada usuário está entre 01/01/1990 e 31/12/1999:**
 * SELECT nome_completo FROM usuario WHERE data_nascimento >= '1990/01/01' AND data_nascimento <= '1999/12/31';
 <p align="center">
   <img width="153" height="195" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Logicos2.PNG?raw=true "OPERADORES LÓGICOS 2"
 </p>
 
+**Seleciona e exibe todos os nomes e descrição de serviços na tabela Servico onde o preco dos mesmos é menor que 100 e a data de publicação deles é igual a 01/01/2019:**
 * SELECT nome, descricao FROM servico WHERE preco < 100 AND data_publicacao >= '2019/01/01';
 <p align="center">
   <img width="784" height="292" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Logicos3.PNG?raw=true "OPERADORES LÓGICOS 3"
 </p>
 
+**Seleciona e exibe todos os bairros e endereços da tabela Endereco onde a cidade das mesmas é Vila Velha ou Serra:**
 * SELECT endereco FROM endereco WHERE codigo_cidade = 3 OR codigo_cidade = 2;
 <p align="center">
   <img width="209" height="475" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Logicos4.PNG?raw=true "OPERADORES LÓGICOS 4"
 </p>
 
+**Seleciona e exibe todos os bairros e endereços da tabela Endereço onde o codigo dos usuarios não é nulo:**
 * SELECT comentario FROM avaliacoes WHERE comentario IS NOT NULL;
 <p align="center">
   <img width="413" height="355" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Logicos5.PNG?raw=true "OPERADORES LÓGICOS 5"
@@ -260,16 +270,19 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 #### Operadores Aritméticos
 
+**Seleciona e exibe o nome, a descrição e o valor de 10% de desconto dos serviços:**
 * SELECT nome, descricao, preco * 0.1 AS Desconto FROM servico;
 <p align="center">
   <img width="922" height="355" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Aritmeticos1.PNG?raw=true "OPERADORES ARITMÉTICOS 1"
 </p>
  
+**Seleciona e exibe o nome, a descrição e o valor total com 10% de desconto dos serviços:** 
 * SELECT nome, descricao, preco * 0.9 AS "Preço com desconto" FROM servico WHERE preco * 0.9 < 90;
 <p align="center">
   <img width="906" height="323" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Aritmeticos2.PNG?raw=true "OPERADORES ARITMÉTICOS 2"
 </p>
  
+**Seleciona e exibe o nome, a descrição e o preço com inflação de 5%:**
 * SELECT nome, descricao, preco * 1.05 AS "Preço com inflação de 5%" FROM servico;
 <p align="center">
   <img width="899" height="355" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Aritmeticos3.PNG?raw=true "OPERADORES ARITMÉTICOS 3"
@@ -277,16 +290,19 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 #### Campos Renomeados
 
+**Seleciona e exibe o nome e o login dos usuários:**
 * SELECT nome_completo AS Nome, nome_usuario AS Login FROM usuario;
 <p align="center">
   <img width="723" height="620" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Campos_Renomeados1.PNG?raw=true "CAMPOS RENOMEADOS 1"
 </p>
 
+**Seleciona e exibe a quantidade de usuários:**
 * SELECT COUNT( * ) AS Qtd_usuarios FROM usuario;
 <p align="center">
   <img width="85" height="58" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Campos_Renomeados2.PNG?raw=true "CAMPOS RENOMEADOS 2"
 </p>
 
+**Seleciona e exibe o nome e a idade dos usuários:**
 * SELECT nome_completo AS Nome, AGE(CURRENT_DATE,data_nascimento) AS Idade FROM usuario;
 <p align="center">
   <img width="632" height="620" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Campos_Renomeados3.PNG?raw=true "CAMPOS RENOMEADOS 3"
@@ -299,62 +315,75 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
  
 #### Operadores Like e Datas
 
+**Seleciona e exibe o nome completo dos usuários que iniciam com M:**
 * SELECT nome_completo FROM usuario WHERE nome_completo ILIKE 'm%';
 <p align="center">
  <img width="131" height="147"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data1.PNG?raw=true "OPERADORES LIKE E DATAS 1">
 </p> 
 
+**Seleciona e exibe o nome completo dos usuários que terminam com A:**
 * SELECT nome_completo FROM usuario WHERE nome_completo LIKE '%a';
 <p align="center">
  <img width="143" height="317"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data2.PNG?raw=true "OPERADORES LIKE E DATAS 2">
 </p> 
 
+**Seleciona e exibe o nome completo e o email dos usuários que possuem contas no yahoo:**
 * SELECT nome_completo, email FROM usuario WHERE email LIKE '%yahoo%';
 <p align="center">
  <img width="599" height="84"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data3.PNG?raw=true "OPERADORES LIKE E DATAS 3">
 </p> 
 
+**Seleciona e exibe o telefone dos usuários com DDD 27:**
 * SELECT telefone FROM contato WHERE telefone LIKE '(27)%';
 <p align="center">
  <img width="95" height="406"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data4.PNG?raw=true "OPERADORES LIKE E DATAS 4">
 </p> 
 
+**Seleciona e exibe o login dos usuários que possuem 7 caracteres:**
 * SELECT nome_usuario FROM usuario WHERE nome_usuario LIKE '_______';
 <p align="center">
  <img width="81" height="254"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data5.PNG?raw=true "OPERADORES LIKE E DATAS 5">
 </p> 
 
+**Seleciona e exibe o telefone dos usuários que possuem DD 28:**
 * SELECT telefone FROM contato WHERE telefone LIKE '(28)%';
 <p align="center">
  <img width="91" height="228"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data6.PNG?raw=true "OPERADORES LIKE E DATAS 6">
 </p> 
 
+**Seleciona e exibe o nome completo e o email dos usuários que possuem conta hotmail:**
 * SELECT nome_completo, email FROM usuario WHERE email LIKE '%hotmail%';
 <p align="center">
  <img width="603" height="289"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data7.PNG?raw=true "OPERADORES LIKE E DATAS 7">
 </p> 
 
 #### Operadores Like e Datas
+
+**Seleciona o nome dos usuário e mostra a quanto tempo ele estão cadastrados no sistema:**
 * SELECT nome_completo, CURRENT_DATE-(data_cadastro) AS "Dias no sistema" FROM usuario;
 <p align="center">
  <img width="677" height="627"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data8.PNG?raw=true "OPERADORES LIKE E DATAS 8">
 </p> 
 
+**Seleciona e exibe o nome e a descrição dos serviços que estão com menos de 180 dias cadastrados no sistema:**
 * SELECT nome, descricao FROM servico WHERE CURRENT_DATE-data_publicacao < 180;
 <p align="center">
  <img width="760" height="227"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data9.PNG?raw=true "OPERADORES LIKE E DATAS 9">
 </p> 
 
+**Exibe a quantidade de serviços que foram cadastrados nos ultimos 6 meses:**
 * SELECT COUNT( * ) AS "Quantidade de servicos nos ultimos 6 meses" FROM servico WHERE CURRENT_DATE-data_publicacao < 180;
 <p align="center">
  <img width="264" height="60"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data10.PNG?raw=true "OPERADORES LIKE E DATAS 10">
 </p> 
 
+**Seleciona e exibe o codigo do serviço que foi agendado nos ultimos 3 meses:**
 * SELECT codigo_servico, COUNT( * ) AS Qtd_Agendamentos_ultimos_3meses FROM agendamento WHERE CURRENT_DATE-data < 91 GROUP BY codigo_servico;
 <p align="center">
  <img width="510" height="320"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data11.PNG?raw=true "OPERADORES LIKE E DATAS 11">
 </p> 
 
+**Seleciona e exibe o nome de todos os serviços e o tempo que eles estão cadastrados no sistema:**
 * SELECT nome, CURRENT_DATE-data_publicacao AS Tempo_no_sistema FROM servico;
 <p align="center">
  <img width="705" height="321"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Operadores_Like_e_Data12.PNG?raw=true "OPERADORES LIKE E DATAS 12">
@@ -362,35 +391,43 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
 
+**Atualização o modo de pagamento do servico com codigo número 009 na tabela Serviço:**
 * UPDATE servico SET codigo_modo_pagamento = 002 WHERE codigo = 009;
 <p align="center">
  <img width="987" height="506"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao1.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 1">
 </p> 
 
+**Atualização a data de agendamento do serviço com o código número 20:**
 * UPDATE agendamento SET data = '2019/11/06'  WHERE codigo = 20;
 <p align="center">
  <img width="987" height="506"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao2.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 2">
 </p>
 
+**Exclusão dos dados da tabela de agendamento onde o código do prestador é igual a 17:**
 * DELETE FROM agendamento WHERE codigo = 20;
 <p align="center">
  <img width="995" height="492"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao3.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 3">
 </p>
 
+**Insere novamente os dados na tabela agendamento que foi excluido:**
 * INSERT INTO agendamento VALUES (020,    002, 016, 016, '2019/11/05', '15h00');
 
+**Exclusão dos dados da tabela de agendamento onde o código do prestador é igual a 19:**
 * DELETE FROM agendamento WHERE codigo = 19;
 <p align="center">
  <img width="995" height="492"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao4.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 4">
 </p>
 
+**Insere novamente os dados na tabela agendamento que foi excluido:**
 * INSERT INTO agendamento VALUES (019, 009, 015, 015, '2019/11/07','9h00');
 
+**Atualização o modo de pagamento do servico com codigo número 009 na tabela Serviço:**
 * UPDATE servico SET codigo_modo_pagamento = 001 WHERE codigo = 009;
 <p align="center">
  <img width="989" height="506"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao5.png?raw=true "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 5">
 </p>
 
+**Atualização do telefone na tabela contato do usuário com o código número 20:**
 * UPDATE contato SET telefone = '(27) 3354-1204' WHERE codigo_usuario = 012;
 <p align="center">
  <img width="605" height="484"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Atualizacao_e_Exclusao6.png "ATUALIZAÇÃO E EXCLUSÃO DE DADOS 6">
@@ -400,31 +437,37 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
         
+**Faz a junção de todas as tabelas:**
 * SELECT cliente.nome_completo AS nome_cliente, contato.telefone, endereco, endereco.numero, bairro.nome as bairro, cidade.nome as cidade, servico.nome as servico, modo as pagamento, MAX(avaliacao) AS Avaliacao_maxima FROM agendamento INNER JOIN servico ON (agendamento.codigo_servico = servico.codigo) INNER JOIN usuario AS cliente ON (agendamento.codigo_cliente = cliente.codigo) INNER JOIN endereco ON (agendamento.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (endereco.codigo_cidade = cidade.codigo) INNER JOIN bairro ON (endereco.codigo_bairro = bairro.codigo) INNER JOIN contato ON (cliente.codigo = contato.codigo_usuario) INNER JOIN modo_pagamento ON (servico.codigo_modo_pagamento = modo_pagamento.codigo) INNER JOIN avaliacoes ON (avaliacoes.codigo_servico = servico.codigo) GROUP BY cliente.nome_completo, contato.telefone, endereco, endereco.numero, bairro.nome, cidade.nome, servico.nome, modo;
 <p align="center">
  <img width="996" height="468"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_Juncao_todas_as_Tabelas.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 1">
 </p>
 
+**Faz junção das tabelas Serviço, Usuário e Agendamento. Mostrando o nome do serviço que será prestado, o dia e a hora do agendamento, nome do cliente e nome do prestador:**
 * SELECT nome AS "Nome Servico", usuario.nome_completo AS "Nome Cliente", prestador.nome_completo AS "Nome Prestador", hora,data FROM servico  INNER JOIN usuario ON (servico.codigo_prestador = usuario.codigo) INNER JOIN agendamento ON (agendamento.codigo_cliente = usuario.codigo) INNER JOIN usuario AS prestador ON (prestador.codigo = servico.codigo_prestador);
 <p align="center">
  <img width="922" height="360"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao1.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 2">
 </p>
 
+**Faz junção das tabelas Cidade, Usuário, Serviço. Mostrando o nome da cidade que estão localizado os prestadores de serviço e o nome dos serviços:**
 * SELECT cidade.nome AS "Nome cidade", servico.nome FROM usuario INNER JOIN endereco ON (usuario.codigo_endereco = endereco.codigo) INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade);
 <p align="center">
  <img width="628" height="404"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao2.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 3">
 </p>
 
+**Faz junção das tabelas Serviço, Usuário e Agendamento. Mostrando a quantidade de agendamentos por prestador de serviço:**
 * SELECT usuario.nome_completo AS "Prestador", servico.nome AS "Nome do servico", COUNT( * ) AS "Quantidade de agendamentos feitos" FROM usuario INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (agendamento.codigo_servico = servico.codigo) GROUP BY usuario.nome_completo, servico.nome ORDER BY COUNT( * ) DESC;
 <p align="center">
  <img width="821" height="400"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao3.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 4">
 </p>
 
+**Faz junção das tabelas Serviço e Avaliações. Mostrando o nome do serviço, a descrição e as avaliações recebidas:**
 * SELECT nome, descricao, avaliacao, comentario FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico);
 <p align="center">
  <img width="914" height="481"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao4.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 5">
 </p>
 
+**Faz junção das tabelas Avaliações, Usuário e Contato. Mostrando o nome do serviço, telefone do prestador, a menor avaliação recebida, a maior avaliação recebida e a média de avaliações recebidas:**
 * SELECT servico.nome, telefone, min(avaliacao) AS "Menor avaliacao", max(avaliacao) AS "Maior avaliacao" FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico) INNER JOIN usuario ON (usuario.codigo = servico.codigo_prestador) INNER JOIN contato ON (usuario.codigo = contato.codigo_usuario) GROUP BY servico.nome, telefone;
 <p align="center">
  <img width="851" height="364"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Consulta_com_Juncao5.PNG?raw=true "JUNÇÃO E ORDENAÇÃO 6">
@@ -434,53 +477,63 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇÕES DE AGRUPAMENTO (Mínimo 6)<br>
 
+**Exibe a quantidade de usuários por sexo:**
 * SELECT sexo, COUNT(  *  ) AS "Quantidade"  FROM usuario GROUP BY sexo; 
 <p align="center">
   <img width="418" height="105" src= https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Group_by1.PNG?raw=true "Consulta Group by 1"
 </p> 
  
+ **Exibe a quantidade de usuários por cidade:**
  * SELECT cidade.nome, COUNT( * ) AS "Quantidade" FROM endereco INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) GROUP BY cidade.nome;
 <p align="center">
   <img width="710" height="289" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Group_by2.PNG?raw=true "Consulta Group by 2"
 </p> 
  
+ **Exibe a quantidade de usuários por bairro:**
  * SELECT bairro.nome, COUNT( * ) AS “Quantidade” FROM endereco INNER JOIN bairro ON (bairro.codigo = endereco.codigo_bairro) GROUP BY bairro.nome;
 <p align="center">
   <img width="629" height="620" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Group_by3.PNG?raw=true "Consulta Group by 3"
 </p> 
  
+ **Exibe a quantidade de avaliações que foram feitas em cada nota:**
  * SELECT avaliacao, COUNT( * ) AS "Quantidade" FROM avaliacoes GROUP BY avaliacao ORDER BY avaliacao DESC; 
 <p align="center">
   <img width="518" height="163" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Group_by4.PNG?raw=true "Consulta Group by 4"
 </p> 
  
+ **Exibe a média de preço dos serviço cadastrados no sistema:**
  * SELECT AVG(NULLIF(preco,0)) AS "Media de precos" FROM servico;
 <p align="center">
   <img width="119" height="58" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Group_by5.PNG?raw=true "Consulta Group by 5"
 </p> 
  
+ **Exibe o código do serviço e a quantidade de agendamento realizada para os mesmos:**
  * SELECT codigo_servico, COUNT ( * ) AS qtd_agendamentos FROM agendamento GROUP BY codigo_servico;
 <p align="center">
   <img width="562" height="355" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Group_by6.PNG?raw=true "Consulta Group by 6"
 </p> 
  
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
-
-* SELECT usuario.nome_completo, endereco.cep FROM usuario LEFT OUTER JOIN endereco ON (usuario.codigo_endereco = endereco.codigo); 
-<p align="center">
-  <img width="744" height="595" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Left_e_Right_join1.PNG?raw=true "Consulta Left e Right Join 1"
-</p>
  
+ **Exibe o nome completo dos usuários que não são prestadores de serviço:**
  * SELECT nome_completo FROM usuario LEFT OUTER JOIN servico ON (usuario.codigo = servico.codigo_prestador) WHERE codigo_prestador IS NULL;  
 <p align="center">
   <img width="179" height="405" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Left_e_Right_join2.PNG?raw=true "Consulta Left e Right Join 2"
 </p>
 
+**Exibe o nome dos serviços que não tem avaliação:**
 * SELECT nome AS nome_servico, descricao FROM servico LEFT OUTER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico) WHERE codigo_servico IS NULL; 
 <p align="center">
   <img width="615" height="63" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Left_e_Right_Join3.PNG?raw=true "Consulta Left e Right Join 3"
 </p>
  
+ **Exibe o nome completo e endereço dos usuários:**
+ * SELECT usuario.nome_completo, endereco.cep FROM usuario LEFT OUTER JOIN endereco ON (usuario.codigo_endereco = endereco.codigo); 
+<p align="center">
+  <img width="744" height="595" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Left_e_Right_join1.PNG?raw=true "Consulta Left e Right Join 1"
+</p>
+ 
+ **Exibe o nome completo dos usuários que prestam algum tipo de serviço:**
  * SELECT usuario.nome_completo, servico.nome FROM usuario  RIGHT OUTER JOIN servico ON (usuario.codigo = servico.codigo_prestador); 
 <p align="center">
   <img width="601" height="325" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Left_e_Right_Join4.PNG?raw=true "Consulta Left e Right Join 4"
@@ -490,31 +543,37 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
         a) Uma junção que envolva Self Join
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 
+**Exibe a View com os nomes e endereços dos usuários cadastrados no sistema:**
 * CREATE VIEW nome_e_endereco_usuario AS SELECT usuario.nome_completo, endereco.endereco AS rua, endereco.numero AS numero_casa, bairro.nome AS nome_bairro, cidade.nome AS nome_cidade FROM usuario INNER JOIN endereco ON (usuario.codigo_endereco = endereco.codigo) INNER JOIN bairro ON (endereco.codigo_bairro = bairro.codigo) INNER JOIN cidade ON (endereco.codigo_cidade = cidade.codigo); 
 <p align="center">
   <img width="939" height="616" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/View1.PNG?raw=true "Criar View 1"
 </p>
 
+**Exibe a View com os nomes dos usuários e telefone dos mesmos:**
 * CREATE VIEW nome_e_contato AS SELECT nome_completo, telefone FROM usuario INNER JOIN contato ON (usuario.codigo = contato.codigo_usuario); 
 <p align="center">
   <img width="689" height="619" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/View2.PNG?raw=true "Criar View 2"
 </p>
 
+**Exibe a View com os nomes dos serviços e preço dos mesmos:**
 * CREATE VIEW servicos_e_precos  AS SELECT nome, preco FROM servico;  
 <p align="center">
   <img width="847" height="313" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/View3.PNG?raw=true "Criar View 3"
 </p>
 
+**Exibe a View com os nomes dos serviços e as avaliações de cada serviço:**
 * CREATE VIEW servico_e_avaliacao  AS SELECT servico.nome, avaliacao FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico); 
 <p align="center">
   <img width="802" height="325" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/View4.PNG?raw=true "Criar View 4"
 </p>
 
+**Exibe a View com nome do usuário e o email do mesmo:**
 * CREATE VIEW contato_eletronico_usuario AS SELECT nome_completo, email, nome_usuario FROM usuario; 
 <p align="center">
   <img width="606" height="626" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/View5.PNG?raw=true "Criar View 5"
 </p>
 
+**Exibe a View com os dados cadastrias de cada usuário, contendo: nome, data de nascimento, cpf nome de usuario e email:**
 * CREATE VIEW dados_cadastrais AS SELECT nome_completo AS "Nome Completo", data_nascimento,cpf, nome_usuario, email FROM usuario; 
 <p align="center">
   <img width="879" height="622" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/View6.PNG?raw=true "Criar View 6"
@@ -522,16 +581,19 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 
+**Exibe o nome completo e o email de cada usuário que tenha o código na tabela Serviço:**
 * SELECT nome_completo, email FROM usuario WHERE codigo IN (SELECT codigo_prestador FROM servico); 
 <p align="center">
   <img width="602" height="319" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Subconsulta1.PNG?raw=true "Subconsulta 1"
 </p>
  
+ **Exibe o nome do serviço que tem a maior avaliação registrada na tabela de Avaliações:**
  * SELECT nome AS "Nome Servico" FROM servico INNER JOIN avaliacoes ON (servico.codigo = avaliacoes.codigo_servico) WHERE avaliacao IN (SELECT MAX(avaliacao) FROM avaliacoes); 
 <p align="center">
   <img width="88" height="173" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Subconsulta2.PNG?raw=true "Subconsulta 2"
 </p>
  
+ **Exibe o endereço, o número e o CEP do usuário que tenha o código da cidade de Vitória:**
  * SELECT endereco, numero, cep FROM endereco WHERE codigo_cidade IN (SELECT codigo FROM cidade WHERE nome <> 'Vitoria'); 
 <p align="center">
   <img width="843" height="559" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Subconsulta3.PNG?raw=true "Subconsulta 3"
@@ -557,6 +619,8 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
         (Em Dump Options #1 Habilitar opções Don't Save Owner e Privilege)
     b) antes de postar o arquivo no git o mesmo deve ser testado/restaurado por outro grupo de alunos/dupla
     c) informar aqui o grupo de alunos/dupla que realizou o teste.
+
+![Arquivo Backup completo do banco de dados postgres"](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ContrateiServicos.backup)
 
 >## Marco de Entrega 04 em:<br>
 
