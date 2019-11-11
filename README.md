@@ -1,5 +1,5 @@
 # TRABALHO BANCO DE DADOS:  Sistema de Contratação de Serviços
-Trabalho desenvolvido durante a disciplina de BD1
+Trabalho desenvolvido durante a disciplina de Banco de Dados I
 
 # Sumário
 
