@@ -59,8 +59,8 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 </p>
         
 #### 5.1 Validação do Modelo Conceitual
-    [Grupo01]: [Nomes dos que participaram na avaliação]
-    [Grupo02]: [Nomes dos que participaram na avaliação]
+    [Grupo01]: [Kaio Fabio]
+    [Grupo02]: [Vinicius]
 
 #### 5.2 Descrição dos dados 
     
@@ -697,6 +697,9 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     c) informar aqui o grupo de alunos/dupla que realizou o teste.
 
 ![Arquivo Backup completo do banco de dados postgres](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ContrateiServicos.backup)
+
+> Teste do Backup:
+   [Grupo01]: [Kaio Fabio]
 
 >## Marco de Entrega 04 em:<br>
 
