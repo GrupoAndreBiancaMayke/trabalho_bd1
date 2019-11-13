@@ -611,8 +611,9 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 - SELECT count(cidade.nome) AS qtd_de_servico_na_cidade,cidade.nome AS nome_da_cidade FROM usuario INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_cliente) INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) group by cidade.nome; 
                               
-* Quantidade de serviços por cidade;
-   <p align="center">
+* Serviços Realizados por Cidade;
+
+ <p align="center">
  <img width="646" height="467"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico1.PNG?raw=true "Grafico 1">
 </p> 
 
@@ -625,8 +626,9 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 - SELECT servico.nome, COUNT( * ) AS qtd_agendamentos FROM agendamento INNER JOIN servico ON (servico.codigo = agendamento.codigo_servico) GROUP BY servico.nome; 
                               
-* Quantidade de serviços por cidade;
-   <p align="center">
+* Total de Agendamento por serviço;
+
+ <p align="center">
  <img width="850" height="457"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico2.PNG?raw=true "Grafico 2">
 </p> 
 
@@ -639,8 +641,9 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 - SELECT COUNT( * ) AS qtd_agendamento, nome_completo AS nome_cliente FROM usuario INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_cliente) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) GROUP BY nome_cliente; 
                               
-* Quantidade de serviços por cidade;
-   <p align="center">
+* Serviços Contratados por Usuário;
+
+ <p align="center">
  <img width="741" height="461"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico3.PNG?raw=true "Grafico 3">
 </p> 
 
@@ -653,8 +656,9 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 - SELECT avaliacao, COUNT( * ) AS qtd_de_avaliacoes FROM avaliacoes GROUP BY avaliacao ORDER BY avaliacao DESC; 
                               
-* Quantidade de serviços por cidade;
-   <p align="center">
+* Avaliações Realizadas;
+
+ <p align="center">
  <img width="580" height="459"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico4.PNG?raw=true "Grafico 4">
 </p> 
 
@@ -665,10 +669,12 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
  <img width="1106" height="629"          src=https://raw.githubusercontent.com/GrupoAndreBiancaMayke/trabalho_bd1/master/images/Relatorio5.PNG?raw=true "Grafico 1">
 </p> 
 
+
 - SELECT cidade.nome AS nome_da_cidade, COUNT( * ) AS qtd_de_moradores FROM usuario INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) INNER JOIN bairro ON (bairro.codigo = endereco.codigo_bairro) GROUP BY nome_da_cidade; 
                               
-* Quantidade de serviços por cidade;
-   <p align="center">
+* Quantidade de moradores por cidade;
+
+ <p align="center">
  <img width="768" height="450"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico5.PNG?raw=true "Grafico 5">
 </p> 
 
@@ -690,7 +696,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     b) antes de postar o arquivo no git o mesmo deve ser testado/restaurado por outro grupo de alunos/dupla
     c) informar aqui o grupo de alunos/dupla que realizou o teste.
 
-![Arquivo Backup completo do banco de dados postgres"](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ContrateiServicos.backup)
+![Arquivo Backup completo do banco de dados postgres](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ContrateiServicos.backup)
 
 >## Marco de Entrega 04 em:<br>
 
