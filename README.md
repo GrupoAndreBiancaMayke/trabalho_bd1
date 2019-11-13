@@ -59,7 +59,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 </p>
         
 #### 5.1 Validação do Modelo Conceitual
-    [Grupo01]: [Kaio Fabio]
+    [Grupo01]: [Kaio Fabio, Renato Lopes]
     [Grupo02]: [Vinicius]
 
 #### 5.2 Descrição dos dados 
@@ -695,11 +695,12 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
         (Em Dump Options #1 Habilitar opções Don't Save Owner e Privilege)
     b) antes de postar o arquivo no git o mesmo deve ser testado/restaurado por outro grupo de alunos/dupla
     c) informar aqui o grupo de alunos/dupla que realizou o teste.
+   
+Teste do Backup:
+- [Grupo01]: [Kaio Fabio, Renato Lopes]
+
 
 ![Arquivo Backup completo do banco de dados postgres](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ContrateiServicos.backup)
-
-> Teste do Backup:
-   [Grupo01]: [Kaio Fabio]
 
 >## Marco de Entrega 04 em:<br>
 
