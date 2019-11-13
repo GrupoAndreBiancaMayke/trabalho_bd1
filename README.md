@@ -606,35 +606,35 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 - SELECT count(cidade.nome) AS qtd_de_servico_na_cidade,cidade.nome AS nome_da_cidade FROM usuario INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_cliente) INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) group by cidade.nome;
  <p align="center">
- <img width="962" height="619"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Relatorio1.PNG?raw=true "Grafico 1">
+ <img width="412" height="159"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Relatorio1.PNG?raw=true "Grafico 1">
 </p> 
 
 - SELECT count(cidade.nome) AS qtd_de_servico_na_cidade,cidade.nome AS nome_da_cidade FROM usuario INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_cliente) INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) group by cidade.nome; 
                               
 * Quantidade de serviços por cidade;
    <p align="center">
- <img width="646" height="467"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Relatorio2.PNG?raw=true "Grafico 1">
+ <img width="646" height="467"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico1.PNG?raw=true "Grafico 1">
 </p> 
 
 **Relatório 2: Informar o número total de serviços agendados dos prestadores incluindo as seguintes informações: nome do serviço, descrição, categoria, preço e contato.**
 
 - SELECT nome_completo AS nome_prestador, nome AS nome_servico, descricao, preco FROM usuario INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador);
  <p align="center">
- <img width="962" height="619"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Relatorio3.PNG?raw=true "Grafico 1">
+ <img width="806" height="341"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Relatorio2.PNG?raw=true "Grafico 1">
 </p> 
 
 - SELECT servico.nome, COUNT( * ) AS qtd_agendamentos FROM agendamento INNER JOIN servico ON (servico.codigo = agendamento.codigo_servico) GROUP BY servico.nome; 
                               
 * Quantidade de serviços por cidade;
    <p align="center">
- <img width="850" height="457"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Relatorio4.PNG?raw=true "Grafico 2">
+ <img width="850" height="457"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico2.PNG?raw=true "Grafico 2">
 </p> 
 
 **Relatório 3: Informar serviços agendados para um determinado dia incluindo as seguintes informações: nome do cliente, descrição do serviço, data, hora e localização.**
 
 - SELECT nome_completo AS nome_cliente, servico.nome AS "servico_contratado", agendamento.data,agendamento.hora, cidade.nome AS nome_da_cidade FROM usuario INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_cliente) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade);
  <p align="center">
- <img width="741" height="461"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Relatorio5.PNG?raw=true "Grafico 1">
+ <img width="683" height="288"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Relatorio3.PNG?raw=true "Grafico 1">
 </p> 
 
 - SELECT COUNT( * ) AS qtd_agendamento, nome_completo AS nome_cliente FROM usuario INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN servico ON (usuario.codigo = servico.codigo_prestador) INNER JOIN agendamento ON (usuario.codigo = agendamento.codigo_cliente) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) GROUP BY nome_cliente; 
@@ -648,7 +648,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 - SELECT nome AS nome_do_servico, avaliacao, comentario FROM avaliacoes INNER JOIN servico ON (servico.codigo = avaliacoes.codigo_servico);
  <p align="center">
- <img width="580" height="469"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico1.PNG?raw=true "Grafico 1">
+ <img width="652" height="349"          src=https://raw.githubusercontent.com/GrupoAndreBiancaMayke/trabalho_bd1/master/images/Relatorio4.PNG?raw=true "Grafico 1">
 </p> 
 
 - SELECT avaliacao, COUNT( * ) AS qtd_de_avaliacoes FROM avaliacoes GROUP BY avaliacao ORDER BY avaliacao DESC; 
@@ -662,7 +662,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 
 - SELECT nome_completo AS nome_cliente,endereco AS rua, bairro.nome AS nome_do_bairro, endereco.numero AS numero_casa,cidade.nome AS nome_da_cidade, email, telefone FROM usuario INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) INNER JOIN bairro ON (bairro.codigo = endereco.codigo_bairro) INNER JOIN contato ON (usuario.codigo = contato.codigo_usuario);
  <p align="center">
- <img width="962" height="619"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/Grafico1.PNG?raw=true "Grafico 1">
+ <img width="1106" height="629"          src=https://raw.githubusercontent.com/GrupoAndreBiancaMayke/trabalho_bd1/master/images/Relatorio5.PNG?raw=true "Grafico 1">
 </p> 
 
 - SELECT cidade.nome AS nome_da_cidade, COUNT( * ) AS qtd_de_moradores FROM usuario INNER JOIN usuario_endereco AS ue ON (usuario.codigo = ue.codigo_usuario) INNER JOIN endereco ON (ue.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (cidade.codigo = endereco.codigo_cidade) INNER JOIN bairro ON (bairro.codigo = endereco.codigo_bairro) GROUP BY nome_da_cidade; 
