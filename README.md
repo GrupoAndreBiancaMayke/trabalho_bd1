@@ -697,12 +697,12 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
     c) informar aqui o grupo de alunos/dupla que realizou o teste.
    
 Teste do Backup:
-- [Grupo01]: [Kaio Fabio, Renato Lopes]
+- [Grupo01]: [Kaio Fabio]
 
 
 ![Arquivo Backup completo do banco de dados postgres](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ContrateiServicos.backup)
 
-![Arquivo colab do Relatório Completo](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/RelatorioFinal.ipynb "Relatório")
+![Arquivo do colab: Relatório Completo](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/RelatorioFinal.ipynb "Relatório")
 
 >## Marco de Entrega 04 em:<br>
 
