@@ -49,7 +49,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 * Notação Entidade Relacionamento
         
 <p align="center">
-  <img width="965" height="551" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ModeloConceitual.PNG?raw=true "Modelo Conceitual")
+  <img width="1003" height="574" src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/ModeloConceitual.png?raw=true "Modelo Conceitual")
 </p>
       
 * Notação UML
@@ -59,7 +59,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 </p>
         
 #### 5.1 Validação do Modelo Conceitual
-    [Grupo01]: [Kaio Fabio, Renato Lopes]
+    [Grupo01]: [Kaio Fabio]
     [Grupo02]: [Vinicius]
 
 #### 5.2 Descrição dos dados 
@@ -701,6 +701,8 @@ Teste do Backup:
 
 
 ![Arquivo Backup completo do banco de dados postgres](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ContrateiServicos.backup)
+
+![Arquivo colab do Relatório Completo](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/RelatorioFinal.ipynb?raw=true "Relatório")
 
 >## Marco de Entrega 04 em:<br>
 
