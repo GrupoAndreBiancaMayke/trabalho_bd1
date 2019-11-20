@@ -46,6 +46,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ![Tabela de dados do Sistema de Contratação de Serviços](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/TabelasdedadosdoSistemadeContratacaodeServicos.xlsx?raw=true "Tabela - Sistema de Contratação de Serviços")
     
 ### 5.MODELO CONCEITUAL<br>
+
 * Notação Entidade Relacionamento
         
 <p align="center">
@@ -143,12 +144,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 >## Marco de Entrega 01 em:<br>
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
-        (Drop para exclusão de tabelas + create definição de para tabelas e estruturas de dados + insert para dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
-        
+   
  <p align="center">
  <img width="1069" height="510"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/insert_tabelas.PNG?raw=true "Dados Tabela  Usuario">
 </p> 
@@ -158,8 +154,9 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ![Arquivo .SQL do Insert aplicado nas tabelas de banco de dados](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ContrateiServicos.sql)        
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
+
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
+
    * SELECT * FROM USUARIO; 
    <p align="center">
  <img width="1170" height="670"          src=https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/images/todos_os_dados_tabela_usuario.png?raw=true "Dados Tabela  Usuario">
@@ -232,10 +229,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 </p> 
 
 #### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E TABELAS OU CAMPOS RENOMEADOS (Mínimo 11)
-    a) Criar 5 consultas que envolvam os operadores lógicos AND, OR e Not
-    b) Criar no mínimo 3 consultas com operadores aritméticos 
-    c) Criar no mínimo 3 consultas com operação de renomear nomes de campos ou tabelas
-    
+
 #### Operadores Lógicos  
 
 **Consulta nas tabelas com Operadores Lógicos:**
@@ -309,10 +303,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 </p>
 
 #### 9.4	CONSULTAS QUE USAM OPERADORES LIKE E DATAS (Mínimo 12) <br>
-    a) Criar outras 5 consultas que envolvam like ou ilike
-    b) Criar uma consulta para cada tipo de função data apresentada.
- 
- 
+
 #### Operadores Like e Datas
 
 **Seleciona e exibe o nome completo dos usuários que iniciam com M:**
@@ -434,9 +425,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 </p>
 
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br> 
-        a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
-        b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
-        
+  
 **Faz a junção de todas as tabelas:**
 * SELECT cliente.nome_completo AS nome_cliente, contato.telefone, endereco, endereco.numero, bairro.nome as bairro, cidade.nome as cidade, servico.nome as servico, modo as pagamento, MAX(avaliacao) AS Avaliacao_maxima FROM agendamento INNER JOIN servico ON (agendamento.codigo_servico = servico.codigo) INNER JOIN usuario AS cliente ON (agendamento.codigo_cliente = cliente.codigo) INNER JOIN endereco ON (agendamento.codigo_endereco = endereco.codigo) INNER JOIN cidade ON (endereco.codigo_cidade = cidade.codigo) INNER JOIN bairro ON (endereco.codigo_bairro = bairro.codigo) INNER JOIN contato ON (cliente.codigo = contato.codigo_usuario) INNER JOIN modo_pagamento ON (servico.codigo_modo_pagamento = modo_pagamento.codigo) INNER JOIN avaliacoes ON (avaliacoes.codigo_servico = servico.codigo) GROUP BY cliente.nome_completo, contato.telefone, endereco, endereco.numero, bairro.nome, cidade.nome, servico.nome, modo;
 <p align="center">
@@ -540,9 +529,7 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 </p>
 
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
-        a) Uma junção que envolva Self Join
-        b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
-
+  
 **Exibe a View com os nomes e endereços dos usuários cadastrados no sistema:**
 * CREATE VIEW nome_e_endereco_usuario AS SELECT usuario.nome_completo, endereco.endereco AS rua, endereco.numero AS numero_casa, bairro.nome AS nome_bairro, cidade.nome AS nome_cidade FROM usuario INNER JOIN endereco ON (usuario.codigo_endereco = endereco.codigo) INNER JOIN bairro ON (endereco.codigo_bairro = bairro.codigo) INNER JOIN cidade ON (endereco.codigo_cidade = cidade.codigo); 
 <p align="center">
@@ -600,7 +587,6 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 </p>
 
 #### 9.11 Relatórios e Gráficos 
-    a)análises e resultados provenientes do banco de dados
     
 **Relatório 1: Informar a quantidade de serviços realizados nas cidades dos clientes.**
 
@@ -681,48 +667,22 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 >## Marco de Entrega 03 em:<br>
 
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
-#### a) Pontos Chave do MINI-MUNDO
-#### b) 5 principais tabelas/fluxos do sistema
-#### c) Perguntas que podem ser respondidads com o sistema proposto
-#### d) Modelo Conceitual
-#### e) Modelo Lógico
-#### f) Relatórios e Gráficos mais importantes para o sistema (mínimo 5) 
-#### --> Tempo de apresentação 10 minutos
-
 
 ### 11 Backup completo do banco de dados postgres 
-    a) deve ser realizado no formato "backup" 
-        (Em Dump Options #1 Habilitar opções Don't Save Owner e Privilege)
-    b) antes de postar o arquivo no git o mesmo deve ser testado/restaurado por outro grupo de alunos/dupla
-    c) informar aqui o grupo de alunos/dupla que realizou o teste.
-   
 Teste do Backup:
-- [Grupo01]: [Kaio Fabio]
+> [Grupo01]: [Kaio Fabio]
 
 
 ![Arquivo Backup completo do banco de dados postgres](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ContrateiServicos.backup)
 
-![Arquivo do colab: Relatório Completo](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/RelatorioFinal.ipynb "Relatório")
+![Arquivo do colab: Relatório Completo](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/RelatorioContrateiServicos.ipynb "Relatório")
+
+[Link para o Relatório no Colab](https://colab.research.google.com/drive/1gaHO2H3rrfOxtIU4tYZ8aKiJL66Ka1i-)
 
 >## Marco de Entrega 04 em:<br>
 
 
-### 12  FORMATACAO NO GIT: https://help.github.com/articles/basic-writing-and-formatting-syntax/
-<comentario no git>
-    
-##### About Formatting
-    https://help.github.com/articles/about-writing-and-formatting-on-github/
-    
-##### Basic Formatting in Git
-    
-    https://help.github.com/articles/basic-writing-and-formatting-syntax/#referencing-issues-and-pull-requests
-    
-    
-##### Working with advanced formatting
-    https://help.github.com/articles/working-with-advanced-formatting/
-#### Mastering Markdown
-    https://guides.github.com/features/mastering-markdown/
-
+### 12  FORMATACAO NO GIT: 
     
 ### OBSERVAÇÕES IMPORTANTES
 
