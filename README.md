@@ -4,7 +4,7 @@ Trabalho desenvolvido durante a disciplina de Banco de Dados I
 # Sumário
 
 ### 1. COMPONENTES<br>
-Integrantes do grupo<br>
+**Integrantes do grupo**<br>
 André Luiz Coelho Silva: andrelcs@me.com<br>
 Bianca Albuquerque da Silva: biancaalbuquerqs@gmail.com<br>
 Mayke Willans Christo Pereira: maykewillians3@gmail.com<br>   
@@ -669,11 +669,14 @@ Um serviço será avaliado pelo usuário após a conclusão do mesmo, servindo d
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
 
 ### 11 Backup completo do banco de dados postgres 
-Teste do Backup:
-> [Grupo01]: [Kaio Fabio]
-
 
 ![Arquivo Backup completo do banco de dados postgres](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/ContrateiServicos.backup)
+
+Teste do Backup:
+    
+    [Grupo01]: [Kaio Fabio]
+
+**Relatório Colab**
 
 ![Arquivo do colab: Relatório Completo](https://github.com/GrupoAndreBiancaMayke/trabalho_bd1/blob/master/arquivos/RelatorioContrateiServicos.ipynb "Relatório")
 
